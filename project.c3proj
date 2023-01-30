@@ -19,13 +19,17 @@
 	},
 	"layouts": {
 		"items": [
-			"Game"
+			"Game",
+			"Main Menu",
+			"Credits"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Game"
+			"Game",
+			"Main Menu",
+			"Credits"
 		],
 		"subfolders": []
 	},
