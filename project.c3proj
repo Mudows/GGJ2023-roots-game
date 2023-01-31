@@ -1,14 +1,24 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 32700,
+	"savedWithRelease": 32702,
 	"name": "roots",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "8tfmighra2c",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Teste"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
