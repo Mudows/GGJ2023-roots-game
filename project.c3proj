@@ -43,7 +43,8 @@
 			"nutrient_large",
 			"root_drag",
 			"Text",
-			"Mouse"
+			"Mouse",
+			"water"
 		],
 		"subfolders": []
 	},
