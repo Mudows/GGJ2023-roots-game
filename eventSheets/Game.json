@@ -1,5 +1,365 @@
 {
 	"name": "Game",
-	"events": [],
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "If the player starts to touch the screen, update the touching variable."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-touch-start",
+							"objectClass": "Touch",
+							"sid": 952577031240823
+						}
+					],
+					"actions": [],
+					"sid": 248500189787565,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 394845556930307,
+									"parameters": {
+										"variable": "isTouching"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 122006953286593,
+									"parameters": {
+										"variable": "isTouching",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 780164429629530
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "if the player touches a root, start drawing process."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 359683760155146,
+							"parameters": {
+								"object": "GridBlock"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 176596777188995,
+							"parameters": {
+								"variable": "previous_X",
+								"value": "GridBlock.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 443077946968499,
+							"parameters": {
+								"variable": "previous_Y",
+								"value": "GridBlock.Y"
+							}
+						}
+					],
+					"sid": 792004532600794,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 948888821579534,
+									"parameters": {
+										"variable": "isTouching"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "GridBlock",
+									"sid": 210009477341424,
+									"parameters": {
+										"instance-variable": "isActive"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "GridBlock",
+									"sid": 763546614709542,
+									"parameters": {
+										"instance-variable": "isActive",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-default-color",
+									"objectClass": "GridBlock",
+									"sid": 962446281796794,
+									"parameters": {
+										"color": "rgbEx(255, 0, 0)"
+									}
+								}
+							],
+							"sid": 257057513003179,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 382102606854414,
+											"disabled": true,
+											"parameters": {
+												"object-to-create": "Line",
+												"layer": "1",
+												"x": "previous_X",
+												"y": "previous_Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "Line",
+											"sid": 928923390304814,
+											"disabled": true,
+											"parameters": {
+												"angle": "angle(previous_X, previous_Y, GridBlock.X, GridBlock.Y)"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "Line",
+											"sid": 307861417303036,
+											"disabled": true,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"Trace\"",
+												"property": "offsetWidth",
+												"end-value": "distance(previous_X, previous_Y, GridBlock.X, GridBlock.Y)",
+												"time": "0.1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										}
+									],
+									"sid": 716909148040728
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Update touch boolean if screen is no longer being touched."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-any-touch-end",
+							"objectClass": "Touch",
+							"sid": 659623265227119
+						}
+					],
+					"actions": [],
+					"sid": 399873215470084,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 158973214186602,
+									"parameters": {
+										"variable": "isTouching"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 645551227788347,
+									"parameters": {
+										"variable": "isTouching",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 464047130160708,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 503009832896967,
+											"parameters": {
+												"object": "GridBlock"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "GridBlock",
+											"sid": 239916709146405,
+											"parameters": {
+												"instance-variable": "isActive",
+												"value": "false"
+											}
+										},
+										{
+											"id": "set-default-color",
+											"objectClass": "GridBlock",
+											"sid": 542751910155588,
+											"parameters": {
+												"color": "rgbEx(255, 255, 255)"
+											}
+										}
+									],
+									"sid": 564421312987246
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 335333409172665,
+											"parameters": {
+												"object": "Line"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Line",
+											"sid": 975234862324872
+										}
+									],
+									"sid": 120847669251560
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 116343953719143
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Start",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 911330216948107
+						}
+					],
+					"actions": [],
+					"sid": 837605601084527,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 571555955625883,
+									"parameters": {
+										"name": "\"Grid Col\"",
+										"start-index": "0",
+										"end-index": "15"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 610709919834141,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 309023671751098,
+											"parameters": {
+												"name": "\"Grid Line\"",
+												"start-index": "0",
+												"end-index": "14"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 128203892929524,
+											"parameters": {
+												"object-to-create": "GridBlock",
+												"layer": "1",
+												"x": "(GridBlock.Width / 2) + loopindex(\"Grid Line\") * GridBlock.Width",
+												"y": "128 + (GridBlock.Height / 2) + loopindex(\"Grid Col\") * GridBlock.Height",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										}
+									],
+									"sid": 822812661446950
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 995198994839082
+		}
+	],
 	"sid": 125633370238273
 }

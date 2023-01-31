@@ -1,10 +1,16 @@
 {
-	"name": "line",
+	"name": "Line",
 	"plugin-id": "Sprite",
 	"sid": 374052041260125,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 242946561616597
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [

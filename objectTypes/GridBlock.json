@@ -1,9 +1,17 @@
 {
-	"name": "point_A",
+	"name": "GridBlock",
 	"plugin-id": "Sprite",
 	"sid": 982265873427544,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "isActive",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 559953653695005
+		}
+	],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -11,14 +19,14 @@
 			{
 				"frames": [
 					{
-						"width": 16,
-						"height": 16,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9533651,
+						"imageSpriteId": 3482466,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
