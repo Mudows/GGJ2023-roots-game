@@ -1,0 +1,44 @@
+{
+	"name": "Globals",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Check if the player is touching the screen."
+		},
+		{
+			"eventType": "variable",
+			"name": "isTouching",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 737988115011817
+		},
+		{
+			"eventType": "comment",
+			"text": "Saves the previous grid position"
+		},
+		{
+			"eventType": "variable",
+			"name": "previous_X",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 436994028156846
+		},
+		{
+			"eventType": "variable",
+			"name": "previous_Y",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 713493189239242
+		}
+	],
+	"sid": 105646159251261
+}

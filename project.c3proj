@@ -5,10 +5,38 @@
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "8tfmighra2c",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"point_A",
+			"point_B",
+			"line",
+			"Mouse",
+			"Touch"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -29,7 +57,8 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits"
+			"Credits",
+			"Globals"
 		],
 		"subfolders": []
 	},
