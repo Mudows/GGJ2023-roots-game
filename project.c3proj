@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 32700,
+	"savedWithRelease": 32702,
 	"name": "roots",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -17,7 +17,8 @@
 	"uniqueId": "8tfmighra2c",
 	"objectTypes": {
 		"items": [
-			"nutrient_small"
+			"nutrient_small",
+			"nutrient_medium"
 		],
 		"subfolders": []
 	},

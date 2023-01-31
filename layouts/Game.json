@@ -19,12 +19,41 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 242,
-						"y": 312,
+						"x": 105,
+						"y": 398,
 						"width": 31,
 						"height": 31,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "nutrient_medium",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 254,
+						"y": 396,
+						"width": 47,
+						"height": 47,
+						"originX": 0.5106382978723404,
+						"originY": 0.5106382978723404,
 						"color": [
 							1,
 							1,
