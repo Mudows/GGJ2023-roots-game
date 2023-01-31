@@ -19,8 +19,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 105,
-						"y": 398,
+						"x": 122,
+						"y": 316,
 						"width": 31,
 						"height": 31,
 						"originX": 0.5,
@@ -48,8 +48,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 254,
-						"y": 396,
+						"x": 239,
+						"y": 320,
 						"width": 47,
 						"height": 47,
 						"originX": 0.5106382978723404,
@@ -77,12 +77,48 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 261,
-						"y": 364,
+						"x": 463,
+						"y": 415,
 						"width": 63,
 						"height": 63,
 						"originX": 1.9841269841269842,
 						"originY": 1.9841269841269842,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "root_drag",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 5,
+					"instanceVariables": {},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 352.03783894730805,
+						"y": 181.2082508025407,
+						"width": 16,
+						"height": 32,
+						"originX": 7.8125,
+						"originY": 3.90625,
 						"color": [
 							1,
 							1,

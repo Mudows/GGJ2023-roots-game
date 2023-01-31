@@ -12,6 +12,13 @@
 			"name": "Sprite",
 			"author": "Scirra",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
 		}
 	],
 	"uniqueId": "8tfmighra2c",
@@ -19,7 +26,8 @@
 		"items": [
 			"nutrient_small",
 			"nutrient_medium",
-			"nutrient_large"
+			"nutrient_large",
+			"root_drag"
 		],
 		"subfolders": []
 	},
