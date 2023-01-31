@@ -18,7 +18,8 @@
 	"objectTypes": {
 		"items": [
 			"nutrient_small",
-			"nutrient_medium"
+			"nutrient_medium",
+			"nutrient_large"
 		],
 		"subfolders": []
 	},
