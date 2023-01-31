@@ -8,8 +8,22 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -27,7 +41,9 @@
 			"nutrient_small",
 			"nutrient_medium",
 			"nutrient_large",
-			"root_drag"
+			"root_drag",
+			"Text",
+			"Mouse"
 		],
 		"subfolders": []
 	},
@@ -41,7 +57,8 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits"
+			"Credits",
+			"Points"
 		],
 		"subfolders": []
 	},
@@ -49,7 +66,8 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits"
+			"Credits",
+			"Points"
 		],
 		"subfolders": []
 	},
