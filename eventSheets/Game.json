@@ -68,28 +68,40 @@
 							}
 						}
 					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 176596777188995,
-							"parameters": {
-								"variable": "previous_X",
-								"value": "GridBlock.X"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 443077946968499,
-							"parameters": {
-								"variable": "previous_Y",
-								"value": "GridBlock.Y"
-							}
-						}
-					],
+					"actions": [],
 					"sid": 792004532600794,
 					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 187454693923721
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 992209390914995,
+									"parameters": {
+										"variable": "previous_X",
+										"value": "GridBlock.X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 615308320563502,
+									"parameters": {
+										"variable": "previous_Y",
+										"value": "GridBlock.Y"
+									}
+								}
+							],
+							"sid": 862416959190370
+						},
 						{
 							"eventType": "block",
 							"conditions": [
@@ -120,14 +132,6 @@
 										"instance-variable": "isActive",
 										"value": "true"
 									}
-								},
-								{
-									"id": "set-default-color",
-									"objectClass": "GridBlock",
-									"sid": 962446281796794,
-									"parameters": {
-										"color": "rgbEx(255, 0, 0)"
-									}
 								}
 							],
 							"sid": 257057513003179,
@@ -139,8 +143,7 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 382102606854414,
-											"disabled": true,
+											"sid": 361731685530252,
 											"parameters": {
 												"object-to-create": "Line",
 												"layer": "1",
@@ -151,10 +154,18 @@
 											}
 										},
 										{
+											"id": "move-to-object",
+											"objectClass": "Line",
+											"sid": 151006060297323,
+											"parameters": {
+												"where": "in-front",
+												"object": "Board"
+											}
+										},
+										{
 											"id": "set-angle",
 											"objectClass": "Line",
-											"sid": 928923390304814,
-											"disabled": true,
+											"sid": 864087400169752,
 											"parameters": {
 												"angle": "angle(previous_X, previous_Y, GridBlock.X, GridBlock.Y)"
 											}
@@ -162,8 +173,7 @@
 										{
 											"id": "tween-one-property",
 											"objectClass": "Line",
-											"sid": 307861417303036,
-											"disabled": true,
+											"sid": 350951333049744,
 											"behaviorType": "Tween",
 											"parameters": {
 												"tags": "\"Trace\"",
@@ -175,6 +185,24 @@
 												"loop": "no",
 												"ping-pong": "no",
 												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 353848919000262,
+											"parameters": {
+												"variable": "previous_X",
+												"value": "GridBlock.X"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 183567358091721,
+											"parameters": {
+												"variable": "previous_Y",
+												"value": "GridBlock.Y"
 											}
 										}
 									],
@@ -264,7 +292,7 @@
 										{
 											"id": "for-each",
 											"objectClass": "System",
-											"sid": 335333409172665,
+											"sid": 763201105868530,
 											"parameters": {
 												"object": "Line"
 											}
@@ -274,7 +302,7 @@
 										{
 											"id": "destroy",
 											"objectClass": "Line",
-											"sid": 975234862324872
+											"sid": 526536743364951
 										}
 									],
 									"sid": 120847669251560
@@ -302,9 +330,23 @@
 							"sid": 911330216948107
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Board",
+							"sid": 642386878572886,
+							"parameters": {
+								"x": "Board.Width / 2",
+								"y": "(Board.Height / 2) + 128"
+							}
+						}
+					],
 					"sid": 837605601084527,
 					"children": [
+						{
+							"eventType": "comment",
+							"text": "Generate the grid is used to draw the root path."
+						},
 						{
 							"eventType": "block",
 							"conditions": [

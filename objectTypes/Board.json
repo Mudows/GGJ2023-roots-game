@@ -1,17 +1,9 @@
 {
-	"name": "GridBlock",
+	"name": "Board",
 	"plugin-id": "Sprite",
-	"sid": 982265873427544,
+	"sid": 554991955936867,
 	"isGlobal": false,
-	"instanceVariables": [
-		{
-			"name": "isActive",
-			"type": "boolean",
-			"desc": "",
-			"show": true,
-			"sid": 559953653695005
-		}
-	],
+	"instanceVariables": [],
 	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
@@ -19,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 32,
-						"height": 32,
+						"width": 480,
+						"height": 512,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 7654305,
+						"imageSpriteId": 5112898,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 641102308717896,
+				"sid": 593895506210886,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

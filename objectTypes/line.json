@@ -1,43 +1,26 @@
 {
 	"name": "Line",
-	"plugin-id": "Sprite",
-	"sid": 374052041260125,
+	"plugin-id": "TiledBg",
+	"sid": 952367515797144,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Tween",
 			"name": "Tween",
-			"sid": 242946561616597
+			"sid": 379451759271028
 		}
 	],
 	"effectTypes": [],
-	"animations": {
-		"items": [
-			{
-				"frames": [
-					{
-						"width": 8,
-						"height": 8,
-						"originX": 0.5,
-						"originY": 0.5,
-						"originalSource": "",
-						"exportFormat": "lossless",
-						"exportQuality": 0.8,
-						"imageSpriteId": 1663684,
-						"useCollisionPoly": true,
-						"duration": 1
-					}
-				],
-				"sid": 119954655682787,
-				"name": "Animation 1",
-				"isLooping": false,
-				"isPingPong": false,
-				"repeatCount": 1,
-				"repeatTo": 0,
-				"speed": 5
-			}
-		],
-		"subfolders": []
+	"image": {
+		"width": 2,
+		"height": 4,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"imageSpriteId": 758614,
+		"useCollisionPoly": true
 	}
 }

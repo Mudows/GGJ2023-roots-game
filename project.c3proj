@@ -22,6 +22,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
@@ -40,9 +47,10 @@
 		"items": [
 			"GridBlock",
 			"point_B",
-			"Line",
 			"Mouse",
-			"Touch"
+			"Touch",
+			"Board",
+			"Line"
 		],
 		"subfolders": []
 	},
