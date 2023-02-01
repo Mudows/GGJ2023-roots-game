@@ -345,7 +345,7 @@
 					"children": [
 						{
 							"eventType": "comment",
-							"text": "Generate the grid is used to draw the root path."
+							"text": "Generate the grid that is used to draw the root path."
 						},
 						{
 							"eventType": "block",
