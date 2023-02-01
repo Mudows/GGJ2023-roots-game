@@ -28,6 +28,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -57,14 +64,16 @@
 			{
 				"items": [
 					"Credits_Title",
-					"Score"
+					"Score",
+					"Meu_Title"
 				],
 				"subfolders": [],
 				"name": "Text"
 			},
 			{
 				"items": [
-					"Mouse"
+					"Mouse",
+					"Touch"
 				],
 				"subfolders": [],
 				"name": "Plugins"

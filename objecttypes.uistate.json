@@ -1,1 +1,50 @@
-[["nutrient_small",{"animations":"{\"expanded\":true,\"subfolders\":[]}"}],["nutrient_medium",{"animations":"{\"expanded\":true,\"subfolders\":[]}"}],["nutrient_large",{"animations":"{\"expanded\":true,\"subfolders\":[]}"}],["root_drag",{"animations":"{\"expanded\":true,\"subfolders\":[]}"}],["water",{"animations":"{\"expanded\":true,\"subfolders\":[]}"}],["StartBTN",{"animations":"{\"expanded\":true,\"subfolders\":[]}"}],["CreditsBTN",{"animations":"{\"expanded\":true,\"subfolders\":[]}"}],["MainBTN",{"animations":"{\"expanded\":true,\"subfolders\":[]}"}]]
+[
+  [
+    "nutrient_small",
+    {
+      "animations": "{\"expanded\":true,\"subfolders\":[]}"
+    }
+  ],
+  [
+    "nutrient_medium",
+    {
+      "animations": "{\"expanded\":true,\"subfolders\":[]}"
+    }
+  ],
+  [
+    "nutrient_large",
+    {
+      "animations": "{\"expanded\":true,\"subfolders\":[]}"
+    }
+  ],
+  [
+    "root_drag",
+    {
+      "animations": "{\"expanded\":true,\"subfolders\":[]}"
+    }
+  ],
+  [
+    "water",
+    {
+      "animations": "{\"expanded\":true,\"subfolders\":[]}"
+    }
+  ],
+  [
+    "StartBTN",
+    {
+      "animations": "{\"expanded\":true,\"subfolders\":[]}"
+    }
+  ],
+  [
+    "CreditsBTN",
+    {
+      "animations": "{\"expanded\":true,\"subfolders\":[]}"
+    }
+  ],
+  [
+    "MainBTN",
+    {
+      "animations": "{\"expanded\":true,\"subfolders\":[]}"
+    }
+  ]
+]
