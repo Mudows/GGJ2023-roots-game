@@ -16,12 +16,34 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-any-touch-start",
-							"objectClass": "Touch",
-							"sid": 952577031240823
+							"id": "on-drag-start",
+							"objectClass": "Root",
+							"sid": 468560981598039,
+							"behaviorType": "DragDrop"
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 121961667413829,
+							"disabled": true,
+							"parameters": {
+								"variable": "previous_X",
+								"value": "Root.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 458973035532372,
+							"disabled": true,
+							"parameters": {
+								"variable": "previous_Y",
+								"value": "Root.Y"
+							}
+						}
+					],
 					"sid": 248500189787565,
 					"children": [
 						{
@@ -60,9 +82,9 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "is-touching-object",
-							"objectClass": "Touch",
-							"sid": 359683760155146,
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 564672455619198,
 							"parameters": {
 								"object": "GridBlock"
 							}
@@ -220,12 +242,19 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "on-any-touch-end",
-							"objectClass": "Touch",
-							"sid": 659623265227119
+							"id": "on-drop",
+							"objectClass": "Root",
+							"sid": 106416651173622,
+							"behaviorType": "DragDrop"
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Root",
+							"sid": 951134140297951
+						}
+					],
 					"sid": 399873215470084,
 					"children": [
 						{
@@ -252,6 +281,7 @@
 								}
 							],
 							"sid": 464047130160708,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -274,17 +304,10 @@
 												"instance-variable": "isActive",
 												"value": "false"
 											}
-										},
-										{
-											"id": "set-default-color",
-											"objectClass": "GridBlock",
-											"sid": 542751910155588,
-											"parameters": {
-												"color": "rgbEx(255, 255, 255)"
-											}
 										}
 									],
-									"sid": 564421312987246
+									"sid": 564421312987246,
+									"disabled": true
 								},
 								{
 									"eventType": "block",
@@ -305,7 +328,95 @@
 											"sid": 526536743364951
 										}
 									],
-									"sid": 120847669251560
+									"sid": 120847669251560,
+									"disabled": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 239146297580678,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [],
+					"sid": 765785283561679,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Root",
+									"sid": 590470471875792,
+									"parameters": {
+										"object": "GridBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "GridBlock",
+									"sid": 455516412165138,
+									"parameters": {
+										"instance-variable": "isActive"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "GridBlock",
+									"sid": 552678051755493,
+									"parameters": {
+										"instance-variable": "isBlocked",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 629113726357534
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Root",
+									"sid": 188411470346304,
+									"parameters": {
+										"object": "GridBlock"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 891513330005617,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "GridBlock",
+											"sid": 674413567289464,
+											"parameters": {
+												"instance-variable": "isBlocked"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Root",
+											"sid": 918374994581073
+										}
+									],
+									"sid": 724162012651235
 								}
 							]
 						}
@@ -332,6 +443,10 @@
 					],
 					"actions": [
 						{
+							"type": "comment",
+							"text": "Position of the grid background."
+						},
+						{
 							"id": "set-position",
 							"objectClass": "Board",
 							"sid": 642386878572886,
@@ -353,11 +468,11 @@
 								{
 									"id": "for",
 									"objectClass": "System",
-									"sid": 571555955625883,
+									"sid": 655077246225323,
 									"parameters": {
 										"name": "\"Grid Col\"",
 										"start-index": "0",
-										"end-index": "15"
+										"end-index": "(640 / (GridBlock.Height + 3)) -1"
 									}
 								}
 							],
@@ -370,11 +485,11 @@
 										{
 											"id": "for",
 											"objectClass": "System",
-											"sid": 309023671751098,
+											"sid": 396758860052422,
 											"parameters": {
 												"name": "\"Grid Line\"",
 												"start-index": "0",
-												"end-index": "14"
+												"end-index": "(480 / (GridBlock.Width + 3)) - 1"
 											}
 										}
 									],
@@ -382,12 +497,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 128203892929524,
+											"sid": 624968482473000,
 											"parameters": {
 												"object-to-create": "GridBlock",
 												"layer": "1",
-												"x": "(GridBlock.Width / 2) + loopindex(\"Grid Line\") * GridBlock.Width",
-												"y": "128 + (GridBlock.Height / 2) + loopindex(\"Grid Col\") * GridBlock.Height",
+												"x": "((GridBlock.Width + 3) / 2) + loopindex(\"Grid Line\") * (GridBlock.Width + 3)",
+												"y": "128 + ((GridBlock.Height + 3) / 2) + loopindex(\"Grid Col\") * (GridBlock.Height + 3)",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}

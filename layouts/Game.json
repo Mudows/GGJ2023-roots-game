@@ -40,24 +40,22 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "GridBlock",
+					"type": "Board",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 2,
-					"instanceVariables": {
-						"isActive": false
-					},
+					"uid": 3,
+					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 521,
-						"y": 188,
-						"width": 32,
-						"height": 32,
+						"x": 243,
+						"y": 387,
+						"width": 480,
+						"height": 512,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -71,7 +69,7 @@
 					}
 				},
 				{
-					"type": "Board",
+					"type": "GridBlock",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -79,14 +77,17 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 3,
-					"instanceVariables": {},
+					"uid": 2,
+					"instanceVariables": {
+						"isActive": false,
+						"isBlocked": false
+					},
 					"behaviors": {},
 					"world": {
-						"x": 164,
-						"y": 224,
-						"width": 480,
-						"height": 512,
+						"x": 527,
+						"y": 193,
+						"width": 29,
+						"height": 29,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -125,15 +126,153 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
 						}
 					},
 					"world": {
-						"x": 235,
-						"y": -104,
+						"x": 518.5455600583317,
+						"y": 140.8866287906698,
 						"width": 2,
 						"height": 4,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Root",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 4,
+					"instanceVariables": {
+						"isActive": false
+					},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 149,
+						"y": 153,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Root",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 8,
+					"instanceVariables": {
+						"isActive": false
+					},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 225,
+						"y": 154,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Root",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 9,
+					"instanceVariables": {
+						"isActive": false
+					},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 311,
+						"y": 153,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

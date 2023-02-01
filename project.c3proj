@@ -36,8 +36,22 @@
 		},
 		{
 			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Tween",
 			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
 			"author": "Scirra",
 			"bundled": false
 		}
@@ -46,7 +60,7 @@
 	"objectTypes": {
 		"items": [
 			"GridBlock",
-			"point_B",
+			"Root",
 			"Mouse",
 			"Touch",
 			"Board",
