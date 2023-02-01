@@ -42,10 +42,7 @@
 			"nutrient_medium",
 			"nutrient_large",
 			"root_drag",
-			"Text",
-			"Mouse",
-			"water",
-			"Credits_Title"
+			"water"
 		],
 		"subfolders": [
 			{
@@ -56,6 +53,21 @@
 				],
 				"subfolders": [],
 				"name": "Buttons"
+			},
+			{
+				"items": [
+					"Credits_Title",
+					"Score"
+				],
+				"subfolders": [],
+				"name": "Text"
+			},
+			{
+				"items": [
+					"Mouse"
+				],
+				"subfolders": [],
+				"name": "Plugins"
 			}
 		]
 	},

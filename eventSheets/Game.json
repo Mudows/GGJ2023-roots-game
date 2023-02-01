@@ -13,7 +13,7 @@
 			"actions": [
 				{
 					"id": "set-text",
-					"objectClass": "Text",
+					"objectClass": "Score",
 					"sid": 932013473945427,
 					"parameters": {
 						"text": "Points"
