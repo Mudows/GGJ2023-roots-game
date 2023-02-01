@@ -34,6 +34,13 @@
 			"author": "Scirra",
 			"bundled": false
 		},
+    {
+      "type": "plugin",
+      "id": "Text",
+      "name": "Text",
+      "author": "Scirra",
+      "bundled": false
+     }
 		{
 			"type": "behavior",
 			"id": "DragnDrop",
@@ -64,7 +71,14 @@
 			"Mouse",
 			"Touch",
 			"Board",
-			"Line"
+			"Line",
+			"nutrient_small",
+			"nutrient_medium",
+			"nutrient_large",
+			"root_drag",
+			"Text",
+			"Mouse",
+			"water"
 		],
 		"subfolders": []
 	},
@@ -78,7 +92,8 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits"
+			"Credits",
+			"Points"
 		],
 		"subfolders": []
 	},
@@ -88,6 +103,7 @@
 			"Main Menu",
 			"Credits",
 			"Globals"
+			"Points"
 		],
 		"subfolders": []
 	},

@@ -1,0 +1,43 @@
+{
+	"name": "root_drag",
+	"plugin-id": "Sprite",
+	"sid": 811583190232206,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 614251982436094
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 32,
+						"originX": 7.8125,
+						"originY": 3.90625,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6057972,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 699521171065625,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
