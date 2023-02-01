@@ -1,0 +1,185 @@
+{
+	"name": "Points",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Points",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 951443971736204
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 963827631761785
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 712801996806534,
+					"parameters": {
+						"text": "Points"
+					}
+				}
+			],
+			"sid": 580449115398532
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "root_drag",
+					"sid": 492901293352226,
+					"parameters": {
+						"object": "nutrient_small"
+					}
+				},
+				{
+					"id": "is-dragging",
+					"objectClass": "root_drag",
+					"sid": 696313864526544,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "nutrient_small",
+					"sid": 861027304783678
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 129568190055953,
+					"parameters": {
+						"variable": "Points",
+						"value": "10"
+					}
+				}
+			],
+			"sid": 546445520368386
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "root_drag",
+					"sid": 946181922157955,
+					"parameters": {
+						"object": "nutrient_medium"
+					}
+				},
+				{
+					"id": "is-dragging",
+					"objectClass": "root_drag",
+					"sid": 175458578166140,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "nutrient_medium",
+					"sid": 808288821170669
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 778944693806151,
+					"parameters": {
+						"variable": "Points",
+						"value": "25"
+					}
+				}
+			],
+			"sid": 818428376948026
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "root_drag",
+					"sid": 908091313682552,
+					"parameters": {
+						"object": "nutrient_large"
+					}
+				},
+				{
+					"id": "is-dragging",
+					"objectClass": "root_drag",
+					"sid": 588196289223718,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "nutrient_large",
+					"sid": 293957948412944
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 586823635855510,
+					"parameters": {
+						"variable": "Points",
+						"value": "50"
+					}
+				}
+			],
+			"sid": 228836102308430
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "root_drag",
+					"sid": 142228358778597,
+					"parameters": {
+						"object": "water"
+					}
+				},
+				{
+					"id": "is-dragging",
+					"objectClass": "root_drag",
+					"sid": 526992854874913,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 851255793190816,
+					"parameters": {
+						"variable": "Points",
+						"value": "Points*1.5"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "root_drag",
+					"sid": 193458523460125,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"state": "disabled"
+					}
+				}
+			],
+			"sid": 410486589267111
+		}
+	],
+	"sid": 222390115869510
+}

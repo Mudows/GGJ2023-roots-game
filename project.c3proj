@@ -1,14 +1,51 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 32700,
+	"savedWithRelease": 32702,
 	"name": "roots",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "8tfmighra2c",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"nutrient_small",
+			"nutrient_medium",
+			"nutrient_large",
+			"root_drag",
+			"Text",
+			"Mouse",
+			"water"
+		],
 		"subfolders": []
 	},
 	"autosaveData": null,
@@ -21,7 +58,8 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits"
+			"Credits",
+			"Points"
 		],
 		"subfolders": []
 	},
@@ -29,7 +67,8 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits"
+			"Credits",
+			"Points"
 		],
 		"subfolders": []
 	},
