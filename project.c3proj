@@ -44,9 +44,20 @@
 			"root_drag",
 			"Text",
 			"Mouse",
-			"water"
+			"water",
+			"Credits_Title"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"CreditsBTN",
+					"StartBTN",
+					"MainBTN"
+				],
+				"subfolders": [],
+				"name": "Buttons"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -58,8 +69,7 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits",
-			"Points"
+			"Credits"
 		],
 		"subfolders": []
 	},
@@ -68,7 +78,7 @@
 			"Game",
 			"Main Menu",
 			"Credits",
-			"Points"
+			"Globals"
 		],
 		"subfolders": []
 	},
