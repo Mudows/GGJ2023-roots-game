@@ -1,8 +1,8 @@
 {
-  "name": "Main Menu",
+  "name": "Globals",
   "tabColor": [
-    0.9000000000000001,
     0.9999999999999999,
+    0.8000000000000002,
     0.8000000000000002,
     1
   ],
@@ -13,7 +13,7 @@
         "scroll": 0,
         "eventSheetView": {
           "conditionsColumnWidth": 300,
-          "conditionNameCellWidth": 90,
+          "conditionNameCellWidth": 93,
           "actionNameCellWidth": 90,
           "fontSizeEm": 1
         }
@@ -23,21 +23,9 @@
     "eventsUIState": [
       {
         "viewsUIState": [
-          {
-            "expanded": true
-          }
+          {}
         ],
-        "bookmark": false,
-        "children": []
-      },
-      {
-        "viewsUIState": [
-          {
-            "expanded": true
-          }
-        ],
-        "bookmark": false,
-        "children": []
+        "bookmark": false
       }
     ]
   }

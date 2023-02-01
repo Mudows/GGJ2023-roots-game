@@ -1,0 +1,16 @@
+{
+	"name": "Globals",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Points",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 951443971736204
+		}
+	],
+	"sid": 222390115869510
+}

@@ -1,5 +1,58 @@
 {
 	"name": "Main Menu",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 460539146568658,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "StartBTN"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 244305382252758,
+					"parameters": {
+						"layout": "Game"
+					}
+				}
+			],
+			"sid": 456244529100691
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 315366882813674,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "CreditsBTN"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 807124270497043,
+					"parameters": {
+						"layout": "Credits"
+					}
+				}
+			],
+			"sid": 408445325124322
+		}
+	],
 	"sid": 319694218092111
 }

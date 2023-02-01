@@ -28,6 +28,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "DragnDrop",
 			"name": "Drag & Drop",
@@ -42,11 +49,36 @@
 			"nutrient_medium",
 			"nutrient_large",
 			"root_drag",
-			"Text",
-			"Mouse",
 			"water"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"CreditsBTN",
+					"StartBTN",
+					"MainBTN"
+				],
+				"subfolders": [],
+				"name": "Buttons"
+			},
+			{
+				"items": [
+					"Credits_Title",
+					"Score",
+					"Meu_Title"
+				],
+				"subfolders": [],
+				"name": "Text"
+			},
+			{
+				"items": [
+					"Mouse",
+					"Touch"
+				],
+				"subfolders": [],
+				"name": "Plugins"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -58,8 +90,7 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits",
-			"Points"
+			"Credits"
 		],
 		"subfolders": []
 	},
@@ -68,7 +99,7 @@
 			"Game",
 			"Main Menu",
 			"Credits",
-			"Points"
+			"Globals"
 		],
 		"subfolders": []
 	},

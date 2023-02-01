@@ -20,7 +20,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 122,
-						"y": 316,
+						"y": 317,
 						"width": 31,
 						"height": 31,
 						"originX": 0.5,
@@ -49,7 +49,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 239,
-						"y": 320,
+						"y": 321,
 						"width": 47,
 						"height": 47,
 						"originX": 0.5106382978723404,
@@ -78,7 +78,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 463,
-						"y": 415,
+						"y": 416,
 						"width": 63,
 						"height": 63,
 						"originX": 1.9841269841269842,
@@ -113,12 +113,84 @@
 						}
 					},
 					"world": {
-						"x": 352.03783894730805,
-						"y": 181.2082508025407,
+						"x": 352,
+						"y": 289,
 						"width": 16,
 						"height": 32,
 						"originX": 7.8125,
 						"originY": 3.90625,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Score",
+					"properties": {
+						"text": "0",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 32,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 14,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 7,
+						"y": 8,
+						"width": 148.64251075746176,
+						"height": 108,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "water",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 15,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 235,
+						"y": 608,
+						"width": 480,
+						"height": 64,
+						"originX": 0.4895833333333333,
+						"originY": 0.484375,
 						"color": [
 							1,
 							1,
