@@ -3,7 +3,7 @@
 	"events": [
 		{
 			"eventType": "group",
-			"disabled": false,
+			"disabled": true,
 			"title": "Controls",
 			"description": "",
 			"isActiveOnStart": true,
@@ -45,6 +45,7 @@
 						}
 					],
 					"sid": 248500189787565,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -70,7 +71,8 @@
 									}
 								}
 							],
-							"sid": 780164429629530
+							"sid": 780164429629530,
+							"disabled": true
 						}
 					]
 				},
@@ -92,6 +94,7 @@
 					],
 					"actions": [],
 					"sid": 792004532600794,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -122,7 +125,8 @@
 									}
 								}
 							],
-							"sid": 862416959190370
+							"sid": 862416959190370,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -157,6 +161,7 @@
 								}
 							],
 							"sid": 257057513003179,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -181,7 +186,7 @@
 											"sid": 151006060297323,
 											"parameters": {
 												"where": "in-front",
-												"object": "Board"
+												"object": "GridBoard"
 											}
 										},
 										{
@@ -228,7 +233,8 @@
 											}
 										}
 									],
-									"sid": 716909148040728
+									"sid": 716909148040728,
+									"disabled": true
 								}
 							]
 						}
@@ -256,6 +262,7 @@
 						}
 					],
 					"sid": 399873215470084,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -281,7 +288,6 @@
 								}
 							],
 							"sid": 464047130160708,
-							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -306,8 +312,7 @@
 											}
 										}
 									],
-									"sid": 564421312987246,
-									"disabled": true
+									"sid": 564421312987246
 								},
 								{
 									"eventType": "block",
@@ -328,8 +333,7 @@
 											"sid": 526536743364951
 										}
 									],
-									"sid": 120847669251560,
-									"disabled": true
+									"sid": 120847669251560
 								}
 							]
 						}
@@ -347,6 +351,7 @@
 					],
 					"actions": [],
 					"sid": 765785283561679,
+					"disabled": true,
 					"children": [
 						{
 							"eventType": "block",
@@ -380,7 +385,8 @@
 									}
 								}
 							],
-							"sid": 629113726357534
+							"sid": 629113726357534,
+							"disabled": true
 						},
 						{
 							"eventType": "block",
@@ -396,6 +402,7 @@
 							],
 							"actions": [],
 							"sid": 891513330005617,
+							"disabled": true,
 							"children": [
 								{
 									"eventType": "block",
@@ -416,7 +423,8 @@
 											"sid": 918374994581073
 										}
 									],
-									"sid": 724162012651235
+									"sid": 724162012651235,
+									"disabled": true
 								}
 							]
 						}
@@ -433,6 +441,16 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"eventType": "variable",
+					"name": "GridSpacing",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 312834602702065
+				},
+				{
 					"eventType": "block",
 					"conditions": [
 						{
@@ -448,11 +466,11 @@
 						},
 						{
 							"id": "set-position",
-							"objectClass": "Board",
+							"objectClass": "GridBoard",
 							"sid": 642386878572886,
 							"parameters": {
-								"x": "Board.Width / 2",
-								"y": "(Board.Height / 2) + 128"
+								"x": "GridBoard.Width / 2",
+								"y": "(GridBoard.Height / 2) + 128"
 							}
 						}
 					],
@@ -468,11 +486,11 @@
 								{
 									"id": "for",
 									"objectClass": "System",
-									"sid": 655077246225323,
+									"sid": 480616450636122,
 									"parameters": {
 										"name": "\"Grid Col\"",
 										"start-index": "0",
-										"end-index": "(640 / (GridBlock.Height + 3)) -1"
+										"end-index": "(640 / (GridBlock.Height + GridSpacing)) -1"
 									}
 								}
 							],
@@ -485,11 +503,11 @@
 										{
 											"id": "for",
 											"objectClass": "System",
-											"sid": 396758860052422,
+											"sid": 971623415352812,
 											"parameters": {
 												"name": "\"Grid Line\"",
 												"start-index": "0",
-												"end-index": "(480 / (GridBlock.Width + 3)) - 1"
+												"end-index": "(480 / (GridBlock.Width + GridSpacing)) - 1"
 											}
 										}
 									],
@@ -497,12 +515,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 624968482473000,
+											"sid": 807469314566981,
 											"parameters": {
 												"object-to-create": "GridBlock",
 												"layer": "1",
-												"x": "((GridBlock.Width + 3) / 2) + loopindex(\"Grid Line\") * (GridBlock.Width + 3)",
-												"y": "128 + ((GridBlock.Height + 3) / 2) + loopindex(\"Grid Col\") * (GridBlock.Height + 3)",
+												"x": "((GridBlock.Width + GridSpacing) / 2) + loopindex(\"Grid Line\") * (GridBlock.Width + GridSpacing)",
+												"y": "128 + ((GridBlock.Height + GridSpacing) / 2) + loopindex(\"Grid Col\") * (GridBlock.Height + GridSpacing)",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
@@ -516,6 +534,198 @@
 				}
 			],
 			"sid": 995198994839082
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Alternate Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 333803527851436,
+							"parameters": {
+								"object": "GridBlock"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 967749055883334,
+							"parameters": {
+								"variable": "previous_X",
+								"value": "GridBlock.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 511168258631976,
+							"parameters": {
+								"variable": "previous_Y",
+								"value": "GridBlock.Y"
+							}
+						}
+					],
+					"sid": 383170107741389,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 185155652255752,
+									"parameters": {
+										"object": "GridBlock"
+									}
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "GridBlock",
+									"sid": 611636733572576,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "GridBlock",
+									"sid": 397696724678829,
+									"parameters": {
+										"instance-variable": "isActive",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 235013396544500
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait-for-previous-actions",
+									"objectClass": "System",
+									"sid": 169966167952831
+								},
+								{
+									"id": "set-animation-frame",
+									"objectClass": "GridBlock",
+									"sid": 659755852034145,
+									"parameters": {
+										"frame-number": "1"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "GridBlock",
+									"sid": 656573889907460,
+									"parameters": {
+										"instance-variable": "isActive",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 429374337620197
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 522909437284022
+						}
+					],
+					"actions": [],
+					"sid": 222481042761004,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "GridBlock",
+									"sid": 936296000450164,
+									"parameters": {
+										"instance-variable": "isActive"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "GridBlock",
+									"sid": 869037539600768,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "GridBlock",
+									"sid": 820364301170855,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "enabled"
+									}
+								}
+							],
+							"sid": 642375093452123
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "GridBlock",
+									"sid": 467431755657953,
+									"parameters": {
+										"instance-variable": "isActive"
+									}
+								},
+								{
+									"id": "compare-animation-frame",
+									"objectClass": "GridBlock",
+									"sid": 688189471647351,
+									"parameters": {
+										"comparison": 0,
+										"number": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "GridBlock",
+									"sid": 572031050483918,
+									"behaviorType": "Solid",
+									"parameters": {
+										"state": "disabled"
+									}
+								}
+							],
+							"sid": 347763125284408
+						}
+					]
+				}
+			],
+			"sid": 775582574941810
 		}
 	],
 	"sid": 125633370238273

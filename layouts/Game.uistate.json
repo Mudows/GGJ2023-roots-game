@@ -50,6 +50,11 @@
     "name": "<root>",
     "children": [
       {
+        "name": "Layer 0",
+        "expanded": true,
+        "children": []
+      },
+      {
         "name": "Game",
         "expanded": true,
         "children": []
@@ -62,8 +67,8 @@
     ]
   },
   "grid": {
-    "show": false,
-    "snap": false,
+    "show": true,
+    "snap": true,
     "width": 32,
     "height": 32,
     "offsetX": 0,
@@ -129,7 +134,86 @@
     },
     {
       "name": "Game",
-      "propertiesBar": {},
+      "propertiesBar": {
+        "properties": [
+          {
+            "name": "Layer properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Scroll & zoom",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Parallax",
+                "expanded": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Appearance",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Effects",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Editor",
+            "expanded": true,
+            "children": []
+          }
+        ],
+        "scrollPosition": 0
+      },
+      "visibleInEditor": true,
+      "locked": false,
+      "parallaxInEditor": false,
+      "opacity": 1,
+      "translucent": false
+    },
+    {
+      "name": "Layer 0",
+      "propertiesBar": {
+        "properties": [
+          {
+            "name": "Layer properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Scroll & zoom",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Parallax",
+                "expanded": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Appearance",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Effects",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Editor",
+            "expanded": true,
+            "children": []
+          }
+        ],
+        "scrollPosition": 0
+      },
       "visibleInEditor": true,
       "locked": false,
       "parallaxInEditor": false,
@@ -141,10 +225,10 @@
     "x": 257,
     "y": 323.5,
     "z": 100,
-    "activeLayer": "Game"
+    "activeLayer": "Layer 0"
   },
   "selectedInstances": [
-    2
+    4
   ],
   "lockedInstances": [],
   "instanceCollections": [
@@ -341,7 +425,173 @@
     },
     {
       "uids": [
-        4
+        2,
+        3
+      ],
+      "properties": {
+        "properties": [
+          {
+            "name": "Object type properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Common",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Position",
+                "expanded": false,
+                "children": []
+              },
+              {
+                "name": "Size",
+                "expanded": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Effects",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Properties",
+            "expanded": true,
+            "children": []
+          }
+        ],
+        "scrollPosition": 0
+      }
+    },
+    {
+      "uids": [
+        2,
+        10
+      ],
+      "properties": {
+        "properties": [
+          {
+            "name": "Object type properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Common",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Position",
+                "expanded": false,
+                "children": []
+              },
+              {
+                "name": "Size",
+                "expanded": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Instance variables",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Behaviors",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Effects",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Container",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Template",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Properties",
+            "expanded": true,
+            "children": []
+          }
+        ],
+        "scrollPosition": 0
+      }
+    },
+    {
+      "uids": [
+        10,
+        11
+      ],
+      "properties": {
+        "properties": [
+          {
+            "name": "Object type properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Common",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Position",
+                "expanded": false,
+                "children": []
+              },
+              {
+                "name": "Size",
+                "expanded": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Instance variables",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Behaviors",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Effects",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Container",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Template",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Properties",
+            "expanded": true,
+            "children": []
+          }
+        ],
+        "scrollPosition": 0
+      }
+    },
+    {
+      "uids": [
+        7
       ],
       "properties": {
         "properties": [
@@ -376,7 +626,7 @@
             "expanded": true,
             "children": [
               {
-                "name": "DragDrop",
+                "name": "Tween",
                 "expanded": true,
                 "children": []
               },
@@ -404,6 +654,175 @@
           },
           {
             "name": "Properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Image transform",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Tile randomization",
+            "expanded": true,
+            "children": []
+          }
+        ],
+        "scrollPosition": 0
+      }
+    },
+    {
+      "uids": [
+        7
+      ],
+      "properties": {
+        "properties": [
+          {
+            "name": "Object type properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Common",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Position",
+                "expanded": false,
+                "children": []
+              },
+              {
+                "name": "Size",
+                "expanded": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Instance variables",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Behaviors",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Tween",
+                "expanded": true,
+                "children": []
+              },
+              {
+                "name": "Solid",
+                "expanded": true,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Effects",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Container",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Template",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Image transform",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Tile randomization",
+            "expanded": true,
+            "children": []
+          }
+        ],
+        "scrollPosition": 0
+      }
+    },
+    {
+      "uids": [
+        7
+      ],
+      "properties": {
+        "properties": [
+          {
+            "name": "Object type properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Common",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Position",
+                "expanded": false,
+                "children": []
+              },
+              {
+                "name": "Size",
+                "expanded": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Instance variables",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Behaviors",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Tween",
+                "expanded": true,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Effects",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Container",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Template",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Image transform",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Tile randomization",
             "expanded": true,
             "children": []
           }
@@ -557,411 +976,6 @@
     },
     {
       "uids": [
-        7
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Instance variables",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Behaviors",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Tween",
-                "expanded": true,
-                "children": []
-              },
-              {
-                "name": "Solid",
-                "expanded": true,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Container",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Template",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Image transform",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Tile randomization",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
-        7
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Instance variables",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Behaviors",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Tween",
-                "expanded": true,
-                "children": []
-              },
-              {
-                "name": "Solid",
-                "expanded": true,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Container",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Template",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Image transform",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Tile randomization",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
-        7
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Instance variables",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Behaviors",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Tween",
-                "expanded": true,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Container",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Template",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Image transform",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Tile randomization",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
-        2,
-        3
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
-        10
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Instance variables",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Behaviors",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Container",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Template",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
-        10
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Instance variables",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Behaviors",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Container",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Template",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
         3
       ],
       "properties": {
@@ -1085,191 +1099,6 @@
     {
       "uids": [
         3
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Instance variables",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Behaviors",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Container",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Template",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
-        2,
-        10
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Instance variables",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Behaviors",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Container",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Template",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
-        11
-      ],
-      "properties": {
-        "properties": [
-          {
-            "name": "Object type properties",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Common",
-            "expanded": true,
-            "children": [
-              {
-                "name": "Position",
-                "expanded": false,
-                "children": []
-              },
-              {
-                "name": "Size",
-                "expanded": false,
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Instance variables",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Behaviors",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Effects",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Container",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Template",
-            "expanded": true,
-            "children": []
-          },
-          {
-            "name": "Properties",
-            "expanded": true,
-            "children": []
-          }
-        ],
-        "scrollPosition": 0
-      }
-    },
-    {
-      "uids": [
-        10,
-        11
       ],
       "properties": {
         "properties": [
@@ -1363,7 +1192,85 @@
           {
             "name": "Behaviors",
             "expanded": true,
+            "children": [
+              {
+                "name": "Solid",
+                "expanded": true,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Effects",
+            "expanded": true,
             "children": []
+          },
+          {
+            "name": "Container",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Template",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Properties",
+            "expanded": true,
+            "children": []
+          }
+        ],
+        "scrollPosition": 0
+      }
+    },
+    {
+      "uids": [
+        4
+      ],
+      "properties": {
+        "properties": [
+          {
+            "name": "Object type properties",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Common",
+            "expanded": true,
+            "children": [
+              {
+                "name": "Position",
+                "expanded": false,
+                "children": []
+              },
+              {
+                "name": "Size",
+                "expanded": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Instance variables",
+            "expanded": true,
+            "children": []
+          },
+          {
+            "name": "Behaviors",
+            "expanded": true,
+            "children": [
+              {
+                "name": "DragDrop",
+                "expanded": true,
+                "children": []
+              },
+              {
+                "name": "TileMovement",
+                "expanded": true,
+                "children": []
+              }
+            ]
           },
           {
             "name": "Effects",

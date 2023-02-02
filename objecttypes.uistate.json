@@ -12,7 +12,7 @@
     }
   ],
   [
-    "Board",
+    "GridBoard",
     {
       "animations": "{\"expanded\":true,\"subfolders\":[]}"
     }

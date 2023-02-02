@@ -1,5 +1,5 @@
 {
-	"name": "Board",
+	"name": "GridBoard",
 	"plugin-id": "Sprite",
 	"sid": 554991955936867,
 	"isGlobal": false,
@@ -18,7 +18,7 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5112898,
+						"imageSpriteId": 549954,
 						"useCollisionPoly": true,
 						"duration": 1
 					}

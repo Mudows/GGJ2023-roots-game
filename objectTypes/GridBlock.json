@@ -19,39 +19,82 @@
 			"sid": 178172815634245
 		}
 	],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "destroy",
+			"name": "DestroyOutsideLayout",
+			"sid": 940331870756942
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 944891816370937
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 29,
-						"height": 29,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1082072,
+						"imageSpriteId": 1899926,
 						"collisionPoly": {
 							"points": [
-								0.16393442622950818,
-								0.16393442622950818,
+								0,
+								0,
 								0.5,
-								0.03278688524590164,
-								0.8360655737704918,
-								0.16393442622950818,
-								0.9672131147540983,
+								0,
+								1,
+								0,
+								1,
 								0.5,
-								0.8360655737704918,
-								0.8360655737704918,
+								1,
+								1,
 								0.5,
-								0.9672131147540983,
-								0.16393442622950818,
-								0.8360655737704918,
-								0.03278688524590164,
+								1,
+								0,
+								1,
+								0,
 								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3150610,
+						"collisionPoly": {
+							"points": [
+								0,
+								0,
+								1,
+								0,
+								1,
+								0.03125,
+								0.03125,
+								0.03125,
+								0.03125,
+								0.96875,
+								1,
+								0.96875,
+								1,
+								1,
+								0,
+								1
 							]
 						},
 						"useCollisionPoly": true,
@@ -59,12 +102,12 @@
 					}
 				],
 				"sid": 641102308717896,
-				"name": "Animation 1",
+				"name": "default",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 0
 			}
 		],
 		"subfolders": []

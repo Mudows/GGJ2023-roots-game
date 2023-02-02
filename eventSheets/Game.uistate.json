@@ -10,7 +10,7 @@
   "uiState": {
     "viewsUIState": [
       {
-        "scroll": 1085,
+        "scroll": 410,
         "eventSheetView": {
           "conditionsColumnWidth": 300,
           "conditionNameCellWidth": 90,
@@ -24,7 +24,7 @@
       {
         "viewsUIState": [
           {
-            "expanded": true
+            "expanded": false
           }
         ],
         "bookmark": false,
@@ -192,6 +192,12 @@
         "children": [
           {
             "viewsUIState": [
+              {}
+            ],
+            "bookmark": false
+          },
+          {
+            "viewsUIState": [
               {
                 "expanded": true
               }
@@ -222,6 +228,72 @@
                     "children": []
                   }
                 ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "viewsUIState": [
+          {
+            "expanded": true
+          }
+        ],
+        "bookmark": false,
+        "children": [
+          {
+            "viewsUIState": [
+              {
+                "expanded": true
+              }
+            ],
+            "bookmark": false,
+            "children": [
+              {
+                "viewsUIState": [
+                  {
+                    "expanded": true
+                  }
+                ],
+                "bookmark": false,
+                "children": []
+              },
+              {
+                "viewsUIState": [
+                  {
+                    "expanded": true
+                  }
+                ],
+                "bookmark": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "viewsUIState": [
+              {
+                "expanded": true
+              }
+            ],
+            "bookmark": false,
+            "children": [
+              {
+                "viewsUIState": [
+                  {
+                    "expanded": true
+                  }
+                ],
+                "bookmark": false,
+                "children": []
+              },
+              {
+                "viewsUIState": [
+                  {
+                    "expanded": true
+                  }
+                ],
+                "bookmark": false,
+                "children": []
               }
             ]
           }

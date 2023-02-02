@@ -132,12 +132,12 @@
             "expanded": true,
             "children": [
               {
-                "name": "Board",
+                "name": "GridBlock",
                 "expanded": true,
                 "children": []
               },
               {
-                "name": "GridBlock",
+                "name": "GridBoard",
                 "expanded": true,
                 "children": []
               },
@@ -255,7 +255,7 @@
     ]
   },
   "propertiesBarActiveObject": {
-    "name": "roots",
-    "type": "project"
+    "name": "instances",
+    "type": "array"
   }
 }
