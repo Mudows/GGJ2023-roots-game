@@ -1,7 +1,7 @@
 {
 	"name": "nutrient_large",
 	"plugin-id": "Sprite",
-	"sid": 621523555656667,
+	"sid": 717013808835712,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1372468,
+						"imageSpriteId": 3065666,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 650087868855081,
+				"sid": 750364124556097,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

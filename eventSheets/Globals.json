@@ -34,6 +34,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 713493189239242
+		},
+		{
+			"eventType": "variable",
+			"name": "Points",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 252910055844039
 		}
 	],
 	"sid": 105646159251261

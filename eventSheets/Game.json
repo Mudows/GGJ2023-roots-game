@@ -548,7 +548,7 @@
 							"objectClass": "GridBlock",
 							"sid": 412601421690213,
 							"parameters": {
-								"object": "vvater"
+								"object": "water"
 							}
 						}
 					],
@@ -664,7 +664,7 @@
 							"objectClass": "Root",
 							"sid": 342496420315335,
 							"parameters": {
-								"object": "vvater"
+								"object": "water"
 							}
 						}
 					],
@@ -680,6 +680,185 @@
 				}
 			],
 			"sid": 775582574941810
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Thiago's Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 302900335733966
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Score",
+							"sid": 380277501841387,
+							"parameters": {
+								"text": "Points"
+							}
+						}
+					],
+					"sid": 582050164354214
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Root",
+							"sid": 719841353934093,
+							"parameters": {
+								"object": "nutrient_small"
+							}
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 126148139622698,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "nutrient_small",
+							"sid": 887865795538227
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 336232267614328,
+							"parameters": {
+								"variable": "Points",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 321948750972781
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Root",
+							"sid": 380791237488290,
+							"parameters": {
+								"object": "nutrient_medium"
+							}
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 809871967104741,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "nutrient_medium",
+							"sid": 206104606220475
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 151823522167644,
+							"parameters": {
+								"variable": "Points",
+								"value": "25"
+							}
+						}
+					],
+					"sid": 174019440586556
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Root",
+							"sid": 421867085631686,
+							"parameters": {
+								"object": "nutrient_large"
+							}
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 502028017493337,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "nutrient_large",
+							"sid": 348104860731972
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 249137780109740,
+							"parameters": {
+								"variable": "Points",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 518736102634877
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Root",
+							"sid": 118219347922096,
+							"parameters": {
+								"object": "water"
+							}
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 688683382410080,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 457470975853713,
+							"parameters": {
+								"variable": "Points",
+								"value": "Points*1.5"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Root",
+							"sid": 925984189446222,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 390524322208737
+				}
+			],
+			"sid": 661311651110008
 		}
 	],
 	"sid": 125633370238273

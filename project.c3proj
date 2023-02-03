@@ -22,6 +22,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
@@ -80,16 +87,56 @@
 	"uniqueId": "8tfmighra2c",
 	"objectTypes": {
 		"items": [
-			"GridBlock",
 			"Root",
-			"Mouse",
-			"Touch",
-			"GridBoard",
 			"Line",
-			"carrot",
-			"vvater"
+			"Score",
+			"nutrient_small",
+			"nutrient_medium",
+			"nutrient_large",
+			"Credits_Title",
+			"MainBTN"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"CreditsBTN",
+					"StartBTN"
+				],
+				"subfolders": [],
+				"name": "Buttons"
+			},
+			{
+				"items": [
+					"Mouse",
+					"Touch"
+				],
+				"subfolders": [],
+				"name": "Plugins"
+			},
+			{
+				"items": [
+					"GridBlock",
+					"GridBoard"
+				],
+				"subfolders": [],
+				"name": "Grid"
+			},
+			{
+				"items": [
+					"Meu_Title"
+				],
+				"subfolders": [],
+				"name": "Text"
+			},
+			{
+				"items": [
+					"carrot",
+					"water"
+				],
+				"subfolders": [],
+				"name": "Scenario"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
