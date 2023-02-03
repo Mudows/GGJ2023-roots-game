@@ -5,7 +5,37 @@
 			"name": "Background",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "GridBoard",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 3,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 243,
+						"y": 387,
+						"width": 480,
+						"height": 512,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 550406273349779,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -35,12 +65,78 @@
 			"global": false
 		},
 		{
+			"name": "Grid",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 235118201412487,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.19215686274509805,
+				0.20784313725490197,
+				0.25098039215686274,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "Game",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [],
+			"sid": 598659106144676,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.19215686274509805,
+				0.20784313725490197,
+				0.25098039215686274,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "GridBoard",
+					"type": "Root",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -48,16 +144,44 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 3,
-					"instanceVariables": {},
-					"behaviors": {},
+					"uid": 4,
+					"instanceVariables": {
+						"isActive": false,
+						"nMoves": 20
+					},
+					"behaviors": {
+						"DragDrop": {
+							"properties": {
+								"axes": "both",
+								"enabled": true
+							}
+						},
+						"TileMovement": {
+							"properties": {
+								"grid-width": 32,
+								"grid-height": 32,
+								"grid-offset-x": 0,
+								"grid-offset-y": 0,
+								"speed-x": 100,
+								"speed-y": 100,
+								"enabled": true,
+								"default-controls": true,
+								"isometric": false
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						}
+					},
 					"world": {
-						"x": 243,
-						"y": 387,
-						"width": 480,
-						"height": 512,
-						"originX": 0.5,
-						"originY": 0.5,
+						"x": 128,
+						"y": 256,
+						"width": 32,
+						"height": 32,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,
@@ -94,8 +218,8 @@
 						}
 					},
 					"world": {
-						"x": 527,
-						"y": 193,
+						"x": 512,
+						"y": 224,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -145,8 +269,8 @@
 						}
 					},
 					"world": {
-						"x": 518.5455600583317,
-						"y": 140.8866287906698,
+						"x": 512,
+						"y": 160,
 						"width": 2,
 						"height": 4,
 						"originX": 0,
@@ -160,43 +284,9 @@
 						"angle": 0,
 						"zElevation": 0
 					}
-				}
-			],
-			"sid": 598659106144676,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"color": [
-				1,
-				1,
-				1,
-				1
-			],
-			"backgroundColor": [
-				0.19215686274509805,
-				0.20784313725490197,
-				0.25098039215686274,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "Layer 0",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [
+				},
 				{
-					"type": "Root",
+					"type": "carrot",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -204,36 +294,50 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 4,
-					"instanceVariables": {
-						"isActive": false
-					},
+					"uid": 10,
+					"instanceVariables": {},
 					"behaviors": {
-						"DragDrop": {
+						"Solid": {
 							"properties": {
-								"axes": "both",
-								"enabled": true
-							}
-						},
-						"TileMovement": {
-							"properties": {
-								"grid-width": 32,
-								"grid-height": 32,
-								"grid-offset-x": 0,
-								"grid-offset-y": 0,
-								"speed-x": 100,
-								"speed-y": 100,
 								"enabled": true,
-								"default-controls": true,
-								"isometric": false
+								"tags": ""
 							}
 						}
 					},
 					"world": {
-						"x": 160,
-						"y": 96,
-						"width": 32,
-						"height": 32,
+						"x": 192,
+						"y": 128,
+						"width": 96,
+						"height": 160,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "vvater",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 576,
+						"width": 480,
+						"height": 64,
 						"originX": 0,
 						"originY": 0,
 						"color": [

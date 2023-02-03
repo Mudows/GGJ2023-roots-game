@@ -57,6 +57,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "destroy",
 			"name": "Destroy outside layout",
 			"author": "Scirra",
@@ -78,7 +85,9 @@
 			"Mouse",
 			"Touch",
 			"GridBoard",
-			"Line"
+			"Line",
+			"carrot",
+			"vvater"
 		],
 		"subfolders": []
 	},

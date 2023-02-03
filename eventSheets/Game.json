@@ -445,7 +445,7 @@
 					"name": "GridSpacing",
 					"type": "number",
 					"initialValue": "0",
-					"comment": "",
+					"comment": "used in case the GridBlock object size is different from the grid (32 x 32) to correct the size and display the block correctly (block must be a square)",
 					"isStatic": false,
 					"isConstant": false,
 					"sid": 312834602702065
@@ -515,7 +515,7 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 807469314566981,
+											"sid": 924482441611445,
 											"parameters": {
 												"object-to-create": "GridBlock",
 												"layer": "1",
@@ -531,6 +531,36 @@
 							]
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "GridBlock",
+							"sid": 210591206264068,
+							"parameters": {
+								"object": "carrot"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "GridBlock",
+							"sid": 412601421690213,
+							"parameters": {
+								"object": "vvater"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "GridBlock",
+							"sid": 517758381425077
+						}
+					],
+					"sid": 608941175009534,
+					"isOrBlock": true
 				}
 			],
 			"sid": 995198994839082
@@ -552,6 +582,20 @@
 							"parameters": {
 								"object": "GridBlock"
 							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 901379724359838,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 702816917845790
 						}
 					],
 					"actions": [
@@ -572,160 +616,67 @@
 								"variable": "previous_Y",
 								"value": "GridBlock.Y"
 							}
-						}
-					],
-					"sid": 383170107741389,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 185155652255752,
-									"parameters": {
-										"object": "GridBlock"
-									}
-								},
-								{
-									"id": "compare-animation-frame",
-									"objectClass": "GridBlock",
-									"sid": 611636733572576,
-									"parameters": {
-										"comparison": 0,
-										"number": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "GridBlock",
-									"sid": 397696724678829,
-									"parameters": {
-										"instance-variable": "isActive",
-										"value": "false"
-									}
-								}
-							],
-							"sid": 235013396544500
 						},
 						{
-							"eventType": "block",
-							"conditions": [],
-							"actions": [
-								{
-									"id": "wait-for-previous-actions",
-									"objectClass": "System",
-									"sid": 169966167952831
-								},
-								{
-									"id": "set-animation-frame",
-									"objectClass": "GridBlock",
-									"sid": 659755852034145,
-									"parameters": {
-										"frame-number": "1"
-									}
-								},
-								{
-									"id": "set-boolean-instvar",
-									"objectClass": "GridBlock",
-									"sid": 656573889907460,
-									"parameters": {
-										"instance-variable": "isActive",
-										"value": "true"
-									}
-								}
-							],
-							"sid": 429374337620197
+							"id": "subtract-from-instvar",
+							"objectClass": "Root",
+							"sid": 338309770983007,
+							"parameters": {
+								"instance-variable": "nMoves",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 127838303340816,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "GridBlock",
+							"sid": 143628970238297,
+							"parameters": {
+								"instance-variable": "isActive",
+								"value": "true"
+							}
 						}
-					]
+					],
+					"sid": 383170107741389
 				},
 				{
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 522909437284022
-						}
-					],
-					"actions": [],
-					"sid": 222481042761004,
-					"disabled": true,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "GridBlock",
-									"sid": 936296000450164,
-									"parameters": {
-										"instance-variable": "isActive"
-									},
-									"isInverted": true
-								},
-								{
-									"id": "compare-animation-frame",
-									"objectClass": "GridBlock",
-									"sid": 869037539600768,
-									"parameters": {
-										"comparison": 0,
-										"number": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-enabled",
-									"objectClass": "GridBlock",
-									"sid": 820364301170855,
-									"behaviorType": "Solid",
-									"parameters": {
-										"state": "enabled"
-									}
-								}
-							],
-							"sid": 642375093452123,
-							"disabled": true
+							"id": "compare-instance-variable",
+							"objectClass": "Root",
+							"sid": 604955350443940,
+							"parameters": {
+								"instance-variable": "nMoves",
+								"comparison": 3,
+								"value": "0"
+							}
 						},
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "GridBlock",
-									"sid": 467431755657953,
-									"parameters": {
-										"instance-variable": "isActive"
-									}
-								},
-								{
-									"id": "compare-animation-frame",
-									"objectClass": "GridBlock",
-									"sid": 688189471647351,
-									"parameters": {
-										"comparison": 0,
-										"number": "1"
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-enabled",
-									"objectClass": "GridBlock",
-									"sid": 572031050483918,
-									"behaviorType": "Solid",
-									"parameters": {
-										"state": "disabled"
-									}
-								}
-							],
-							"sid": 347763125284408,
-							"disabled": true
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 342496420315335,
+							"parameters": {
+								"object": "vvater"
+							}
 						}
-					]
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Root",
+							"sid": 421983083202961
+						}
+					],
+					"sid": 916375459935130,
+					"isOrBlock": true
 				}
 			],
 			"sid": 775582574941810
