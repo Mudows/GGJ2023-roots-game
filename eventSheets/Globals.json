@@ -2,18 +2,24 @@
 	"name": "Globals",
 	"events": [
 		{
-			"eventType": "comment",
-			"text": "Check if the player is touching the screen."
-		},
-		{
 			"eventType": "variable",
 			"name": "isTouching",
 			"type": "boolean",
 			"initialValue": "false",
-			"comment": "",
+			"comment": "Check if the player is touching the screen.",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 737988115011817
+		},
+		{
+			"eventType": "variable",
+			"name": "nMoves",
+			"type": "number",
+			"initialValue": "20",
+			"comment": "How many moves in the grid the player can do to create the root path.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 220134257683618
 		},
 		{
 			"eventType": "comment",
