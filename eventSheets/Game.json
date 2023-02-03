@@ -528,10 +528,10 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 960940516848822,
+											"sid": 638812218877371,
 											"parameters": {
 												"variable": "randomTile",
-												"value": "int(random(0,11))"
+												"value": "int(random(0,101))"
 											}
 										}
 									],
@@ -543,11 +543,11 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 395321851289281,
+													"sid": 184291026986682,
 													"parameters": {
 														"variable": "randomTile",
-														"comparison": 3,
-														"value": "7"
+														"comparison": 5,
+														"value": "65"
 													}
 												}
 											],
@@ -555,35 +555,18 @@
 												{
 													"id": "set-animation-frame",
 													"objectClass": "GridBlock",
-													"sid": 329969154365762,
+													"sid": 727582459499546,
 													"parameters": {
-														"frame-number": "0"
+														"frame-number": "5"
 													}
-												}
-											],
-											"sid": 539588181577350
-										},
-										{
-											"eventType": "block",
-											"conditions": [
+												},
 												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 621972980432565,
-													"parameters": {
-														"variable": "randomTile",
-														"comparison": 0,
-														"value": "8"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-animation-frame",
+													"id": "set-enabled",
 													"objectClass": "GridBlock",
-													"sid": 123858040961667,
+													"sid": 654384044930296,
+													"behaviorType": "Solid",
 													"parameters": {
-														"frame-number": "2"
+														"state": "enabled"
 													}
 												}
 											],
@@ -595,11 +578,46 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 482166170627592,
+													"sid": 385892984407676,
 													"parameters": {
 														"variable": "randomTile",
-														"comparison": 0,
-														"value": "9"
+														"comparison": 5,
+														"value": "71"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "GridBlock",
+													"sid": 874930741540551,
+													"parameters": {
+														"frame-number": "2"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "GridBlock",
+													"sid": 356115926619725,
+													"behaviorType": "Solid",
+													"parameters": {
+														"state": "disabled"
+													}
+												}
+											],
+											"sid": 202549558086188
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 673326603994223,
+													"parameters": {
+														"variable": "randomTile",
+														"comparison": 5,
+														"value": "86"
 													}
 												}
 											],
@@ -611,6 +629,15 @@
 													"parameters": {
 														"frame-number": "3"
 													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "GridBlock",
+													"sid": 250348611255794,
+													"behaviorType": "Solid",
+													"parameters": {
+														"state": "disabled"
+													}
 												}
 											],
 											"sid": 141807359585957
@@ -621,11 +648,11 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 225520157120309,
+													"sid": 814313717989235,
 													"parameters": {
 														"variable": "randomTile",
-														"comparison": 0,
-														"value": "10"
+														"comparison": 5,
+														"value": "95"
 													}
 												}
 											],
@@ -636,6 +663,15 @@
 													"sid": 562149678765889,
 													"parameters": {
 														"frame-number": "4"
+													}
+												},
+												{
+													"id": "set-enabled",
+													"objectClass": "GridBlock",
+													"sid": 121675827126285,
+													"behaviorType": "Solid",
+													"parameters": {
+														"state": "disabled"
 													}
 												}
 											],

@@ -1,7 +1,7 @@
 {
 	"name": "MainBTN",
 	"plugin-id": "Sprite",
-	"sid": 896160740142639,
+	"sid": 303905245067413,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6592226,
+						"imageSpriteId": 5776502,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 744733160284041,
+				"sid": 819341421580845,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

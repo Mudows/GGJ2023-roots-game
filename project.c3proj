@@ -88,19 +88,14 @@
 	"objectTypes": {
 		"items": [
 			"Root",
-			"Line",
-			"Score",
-			"nutrient_small",
-			"nutrient_medium",
-			"nutrient_large",
-			"Credits_Title",
-			"MainBTN"
+			"Line"
 		],
 		"subfolders": [
 			{
 				"items": [
 					"CreditsBTN",
-					"StartBTN"
+					"StartBTN",
+					"MainBTN"
 				],
 				"subfolders": [],
 				"name": "Buttons"
@@ -123,7 +118,9 @@
 			},
 			{
 				"items": [
-					"Meu_Title"
+					"Meu_Title",
+					"Credits_Title",
+					"Score"
 				],
 				"subfolders": [],
 				"name": "Text"
