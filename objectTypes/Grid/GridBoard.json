@@ -1,7 +1,7 @@
 {
-	"name": "nutrient_small",
+	"name": "GridBoard",
 	"plugin-id": "Sprite",
-	"sid": 866177344888253,
+	"sid": 554991955936867,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 31,
-						"height": 31,
+						"width": 480,
+						"height": 512,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2684120,
+						"imageSpriteId": 549954,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 243211517068764,
+				"sid": 593895506210886,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

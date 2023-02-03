@@ -15,12 +15,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 13,
+					"uid": 8,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 244,
-						"y": 352,
+						"x": 237,
+						"y": 400,
 						"width": 128,
 						"height": 32,
 						"originX": 0.5,
@@ -44,12 +44,12 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 16,
+					"uid": 9,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 244,
-						"y": 414,
+						"x": 237,
+						"y": 462,
 						"width": 128,
 						"height": 32,
 						"originX": 0.5,
@@ -87,12 +87,12 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 19,
+					"uid": 12,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 118,
-						"y": 62,
+						"x": 111,
+						"y": 110,
 						"width": 249,
 						"height": 143,
 						"originX": 0,

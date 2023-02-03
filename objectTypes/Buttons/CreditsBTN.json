@@ -1,7 +1,7 @@
 {
 	"name": "CreditsBTN",
 	"plugin-id": "Sprite",
-	"sid": 369950532325824,
+	"sid": 303073728898296,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -18,12 +18,12 @@
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4446915,
+						"imageSpriteId": 6072349,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 697277546983165,
+				"sid": 603775053081007,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

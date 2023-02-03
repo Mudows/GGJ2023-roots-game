@@ -1,7 +1,7 @@
 {
-	"name": "nutrient_small",
+	"name": "MainBTN",
 	"plugin-id": "Sprite",
-	"sid": 866177344888253,
+	"sid": 303905245067413,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,19 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 31,
-						"height": 31,
+						"width": 128,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2684120,
+						"imageSpriteId": 5776502,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 243211517068764,
+				"sid": 819341421580845,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

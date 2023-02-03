@@ -2,173 +2,863 @@
 	"name": "Game",
 	"events": [
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": true,
+			"title": "Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 136998343659482
+					"eventType": "comment",
+					"text": "If the player starts to touch the screen, update the touching variable."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drag-start",
+							"objectClass": "Root",
+							"sid": 468560981598039,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 121961667413829,
+							"disabled": true,
+							"parameters": {
+								"variable": "previous_X",
+								"value": "Root.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 458973035532372,
+							"disabled": true,
+							"parameters": {
+								"variable": "previous_Y",
+								"value": "Root.Y"
+							}
+						}
+					],
+					"sid": 248500189787565,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 394845556930307,
+									"parameters": {
+										"variable": "isTouching"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 122006953286593,
+									"parameters": {
+										"variable": "isTouching",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 780164429629530,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "if the player touches a root, start drawing process."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 564672455619198,
+							"parameters": {
+								"object": "GridBlock"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 792004532600794,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 187454693923721
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 992209390914995,
+									"parameters": {
+										"variable": "previous_X",
+										"value": "GridBlock.X"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 615308320563502,
+									"parameters": {
+										"variable": "previous_Y",
+										"value": "GridBlock.Y"
+									}
+								}
+							],
+							"sid": 862416959190370,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 948888821579534,
+									"parameters": {
+										"variable": "isTouching"
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "GridBlock",
+									"sid": 210009477341424,
+									"parameters": {
+										"instance-variable": "isActive"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "GridBlock",
+									"sid": 763546614709542,
+									"parameters": {
+										"instance-variable": "isActive",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 257057513003179,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 361731685530252,
+											"parameters": {
+												"object-to-create": "Line",
+												"layer": "1",
+												"x": "previous_X",
+												"y": "previous_Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "move-to-object",
+											"objectClass": "Line",
+											"sid": 151006060297323,
+											"parameters": {
+												"where": "in-front",
+												"object": "GridBoard"
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "Line",
+											"sid": 864087400169752,
+											"parameters": {
+												"angle": "angle(previous_X, previous_Y, GridBlock.X, GridBlock.Y)"
+											}
+										},
+										{
+											"id": "tween-one-property",
+											"objectClass": "Line",
+											"sid": 350951333049744,
+											"behaviorType": "Tween",
+											"parameters": {
+												"tags": "\"Trace\"",
+												"property": "offsetWidth",
+												"end-value": "distance(previous_X, previous_Y, GridBlock.X, GridBlock.Y)",
+												"time": "0.1",
+												"ease": "default",
+												"destroy-on-complete": "no",
+												"loop": "no",
+												"ping-pong": "no",
+												"repeat-count": "1"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 353848919000262,
+											"parameters": {
+												"variable": "previous_X",
+												"value": "GridBlock.X"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 183567358091721,
+											"parameters": {
+												"variable": "previous_Y",
+												"value": "GridBlock.Y"
+											}
+										}
+									],
+									"sid": 716909148040728,
+									"disabled": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "Update touch boolean if screen is no longer being touched."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-drop",
+							"objectClass": "Root",
+							"sid": 106416651173622,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Root",
+							"sid": 951134140297951
+						}
+					],
+					"sid": 399873215470084,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 158973214186602,
+									"parameters": {
+										"variable": "isTouching"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 645551227788347,
+									"parameters": {
+										"variable": "isTouching",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 464047130160708,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 503009832896967,
+											"parameters": {
+												"object": "GridBlock"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-boolean-instvar",
+											"objectClass": "GridBlock",
+											"sid": 239916709146405,
+											"parameters": {
+												"instance-variable": "isActive",
+												"value": "false"
+											}
+										}
+									],
+									"sid": 564421312987246
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 763201105868530,
+											"parameters": {
+												"object": "Line"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Line",
+											"sid": 526536743364951
+										}
+									],
+									"sid": 120847669251560
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 239146297580678,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [],
+					"sid": 765785283561679,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Root",
+									"sid": 590470471875792,
+									"parameters": {
+										"object": "GridBlock"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "GridBlock",
+									"sid": 455516412165138,
+									"parameters": {
+										"instance-variable": "isActive"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "GridBlock",
+									"sid": 552678051755493,
+									"parameters": {
+										"instance-variable": "isBlocked",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 629113726357534,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Root",
+									"sid": 188411470346304,
+									"parameters": {
+										"object": "GridBlock"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 891513330005617,
+							"disabled": true,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "GridBlock",
+											"sid": 674413567289464,
+											"parameters": {
+												"instance-variable": "isBlocked"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "Root",
+											"sid": 918374994581073
+										}
+									],
+									"sid": 724162012651235,
+									"disabled": true
+								}
+							]
+						}
+					]
 				}
 			],
-			"actions": [
-				{
-					"id": "set-text",
-					"objectClass": "Score",
-					"sid": 932013473945427,
-					"parameters": {
-						"text": "Points"
-					}
-				}
-			],
-			"sid": 719167918515936
+			"sid": 116343953719143
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Start",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "root_drag",
-					"sid": 206260088708955,
-					"parameters": {
-						"object": "nutrient_small"
-					}
+					"eventType": "variable",
+					"name": "GridSpacing",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "used in case the GridBlock object size is different from the grid (32 x 32) to correct the size and display the block correctly (block must be a square)",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 312834602702065
 				},
 				{
-					"id": "is-dragging",
-					"objectClass": "root_drag",
-					"sid": 220576904533593,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "nutrient_small",
-					"sid": 828942832101544
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 911330216948107
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "Position of the grid background."
+						},
+						{
+							"id": "set-position",
+							"objectClass": "GridBoard",
+							"sid": 642386878572886,
+							"parameters": {
+								"x": "GridBoard.Width / 2",
+								"y": "(GridBoard.Height / 2) + 128"
+							}
+						}
+					],
+					"sid": 837605601084527,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Generate the grid that is used to draw the root path."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 480616450636122,
+									"parameters": {
+										"name": "\"Grid Col\"",
+										"start-index": "0",
+										"end-index": "(640 / (GridBlock.Height + GridSpacing)) -1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 610709919834141,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 971623415352812,
+											"parameters": {
+												"name": "\"Grid Line\"",
+												"start-index": "0",
+												"end-index": "(480 / (GridBlock.Width + GridSpacing)) - 1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 924482441611445,
+											"parameters": {
+												"object-to-create": "GridBlock",
+												"layer": "1",
+												"x": "((GridBlock.Width + GridSpacing) / 2) + loopindex(\"Grid Line\") * (GridBlock.Width + GridSpacing)",
+												"y": "128 + ((GridBlock.Height + GridSpacing) / 2) + loopindex(\"Grid Col\") * (GridBlock.Height + GridSpacing)",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										}
+									],
+									"sid": 822812661446950
+								}
+							]
+						}
+					]
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 960445457726565,
-					"parameters": {
-						"variable": "Points",
-						"value": "10"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "GridBlock",
+							"sid": 210591206264068,
+							"parameters": {
+								"object": "carrot"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "GridBlock",
+							"sid": 412601421690213,
+							"parameters": {
+								"object": "water"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "GridBlock",
+							"sid": 517758381425077
+						}
+					],
+					"sid": 608941175009534,
+					"isOrBlock": true
 				}
 			],
-			"sid": 147527626223964
+			"sid": 995198994839082
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Alternate Controls",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "root_drag",
-					"sid": 724539218799383,
-					"parameters": {
-						"object": "nutrient_medium"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 333803527851436,
+							"parameters": {
+								"object": "GridBlock"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 901379724359838,
+							"parameters": {
+								"comparison": 0,
+								"number": "0"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 702816917845790
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 967749055883334,
+							"parameters": {
+								"variable": "previous_X",
+								"value": "GridBlock.X"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 511168258631976,
+							"parameters": {
+								"variable": "previous_Y",
+								"value": "GridBlock.Y"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Root",
+							"sid": 338309770983007,
+							"parameters": {
+								"instance-variable": "nMoves",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 127838303340816,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "GridBlock",
+							"sid": 143628970238297,
+							"parameters": {
+								"instance-variable": "isActive",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 383170107741389
 				},
 				{
-					"id": "is-dragging",
-					"objectClass": "root_drag",
-					"sid": 131843216917796,
-					"behaviorType": "DragDrop"
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Root",
+							"sid": 604955350443940,
+							"parameters": {
+								"instance-variable": "nMoves",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 342496420315335,
+							"parameters": {
+								"object": "water"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Root",
+							"sid": 421983083202961
+						}
+					],
+					"sid": 916375459935130,
+					"isOrBlock": true
 				}
 			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "nutrient_medium",
-					"sid": 329223164474792
-				},
-				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 902191046687622,
-					"parameters": {
-						"variable": "Points",
-						"value": "25"
-					}
-				}
-			],
-			"sid": 274072551368530
+			"sid": 775582574941810
 		},
 		{
-			"eventType": "block",
-			"conditions": [
+			"eventType": "group",
+			"disabled": false,
+			"title": "Thiago's Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
 				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "root_drag",
-					"sid": 648308544127487,
-					"parameters": {
-						"object": "nutrient_large"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 302900335733966
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Score",
+							"sid": 380277501841387,
+							"parameters": {
+								"text": "Points"
+							}
+						}
+					],
+					"sid": 582050164354214
 				},
 				{
-					"id": "is-dragging",
-					"objectClass": "root_drag",
-					"sid": 262130029321872,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "nutrient_large",
-					"sid": 942782719058637
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Root",
+							"sid": 719841353934093,
+							"parameters": {
+								"object": "nutrient_small"
+							}
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 126148139622698,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "nutrient_small",
+							"sid": 887865795538227
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 336232267614328,
+							"parameters": {
+								"variable": "Points",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 321948750972781
 				},
 				{
-					"id": "add-to-eventvar",
-					"objectClass": "System",
-					"sid": 514406823977491,
-					"parameters": {
-						"variable": "Points",
-						"value": "50"
-					}
-				}
-			],
-			"sid": 613580711198409
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-collision-with-another-object",
-					"objectClass": "root_drag",
-					"sid": 159681228467683,
-					"parameters": {
-						"object": "water"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Root",
+							"sid": 380791237488290,
+							"parameters": {
+								"object": "nutrient_medium"
+							}
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 809871967104741,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "nutrient_medium",
+							"sid": 206104606220475
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 151823522167644,
+							"parameters": {
+								"variable": "Points",
+								"value": "25"
+							}
+						}
+					],
+					"sid": 174019440586556
 				},
 				{
-					"id": "is-dragging",
-					"objectClass": "root_drag",
-					"sid": 449488276692375,
-					"behaviorType": "DragDrop"
-				}
-			],
-			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 934890570089639,
-					"parameters": {
-						"variable": "Points",
-						"value": "Points*1.5"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Root",
+							"sid": 421867085631686,
+							"parameters": {
+								"object": "nutrient_large"
+							}
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 502028017493337,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "nutrient_large",
+							"sid": 348104860731972
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 249137780109740,
+							"parameters": {
+								"variable": "Points",
+								"value": "50"
+							}
+						}
+					],
+					"sid": 518736102634877
 				},
 				{
-					"id": "set-enabled",
-					"objectClass": "root_drag",
-					"sid": 244171305682390,
-					"behaviorType": "DragDrop",
-					"parameters": {
-						"state": "disabled"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Root",
+							"sid": 118219347922096,
+							"parameters": {
+								"object": "water"
+							}
+						},
+						{
+							"id": "is-dragging",
+							"objectClass": "Root",
+							"sid": 688683382410080,
+							"behaviorType": "DragDrop"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 457470975853713,
+							"parameters": {
+								"variable": "Points",
+								"value": "Points*1.5"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Root",
+							"sid": 925984189446222,
+							"behaviorType": "DragDrop",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 390524322208737
 				}
 			],
-			"sid": 231054834074535
+			"sid": 661311651110008
 		}
 	],
 	"sid": 125633370238273
