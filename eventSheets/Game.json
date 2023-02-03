@@ -746,15 +746,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "GridBlock",
-							"sid": 375834105831632,
-							"disabled": true,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 794530752464528,
@@ -797,15 +788,6 @@
 					],
 					"actions": [
 						{
-							"id": "set-animation-frame",
-							"objectClass": "GridBlock",
-							"sid": 747765537726946,
-							"disabled": true,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
-						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
 							"sid": 897241954610615,
@@ -847,15 +829,6 @@
 						}
 					],
 					"actions": [
-						{
-							"id": "set-animation-frame",
-							"objectClass": "GridBlock",
-							"sid": 480495996888030,
-							"disabled": true,
-							"parameters": {
-								"frame-number": "1"
-							}
-						},
 						{
 							"id": "add-to-eventvar",
 							"objectClass": "System",
@@ -999,6 +972,14 @@
 								"instance-variable": "isActive",
 								"value": "true"
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MovesCounter",
+							"sid": 681307355183267,
+							"parameters": {
+								"text": "Root.nMoves"
+							}
 						}
 					],
 					"sid": 383170107741389
@@ -1029,6 +1010,61 @@
 				}
 			],
 			"sid": 775582574941810
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "Root",
+					"sid": 749081788332897
+				}
+			],
+			"actions": [],
+			"sid": 160380578583676,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nth-instance",
+							"objectClass": "System",
+							"sid": 865248074097418,
+							"parameters": {
+								"object": "spawnPoint",
+								"instance": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "spawnPoint",
+							"sid": 360908532467411,
+							"parameters": {
+								"object": "Root",
+								"layer": "2",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "spawnPoint",
+							"sid": 354389978514417
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MovesCounter",
+							"sid": 930224231786804,
+							"parameters": {
+								"text": "Root.nMoves"
+							}
+						}
+					],
+					"sid": 182085937298014
+				}
+			]
 		}
 	],
 	"sid": 125633370238273

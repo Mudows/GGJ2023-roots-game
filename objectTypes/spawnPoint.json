@@ -1,7 +1,7 @@
 {
-	"name": "water",
+	"name": "spawnPoint",
 	"plugin-id": "Sprite",
-	"sid": 354828917158272,
+	"sid": 518130924609357,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,31 +11,19 @@
 			{
 				"frames": [
 					{
-						"width": 480,
-						"height": 64,
+						"width": 16,
+						"height": 16,
 						"originX": 0,
 						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2510643,
-						"collisionPoly": {
-							"points": [
-								0,
-								0.03125,
-								1,
-								0.03125,
-								1,
-								1,
-								0,
-								1
-							]
-						},
+						"imageSpriteId": 8245361,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 296736787222726,
+				"sid": 839573902738499,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

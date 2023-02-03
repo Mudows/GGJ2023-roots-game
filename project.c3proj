@@ -88,7 +88,8 @@
 	"objectTypes": {
 		"items": [
 			"Root",
-			"Line"
+			"Line",
+			"spawnPoint"
 		],
 		"subfolders": [
 			{
@@ -120,7 +121,8 @@
 				"items": [
 					"Meu_Title",
 					"Credits_Title",
-					"Score"
+					"Score",
+					"MovesCounter"
 				],
 				"subfolders": [],
 				"name": "Text"
