@@ -44,6 +44,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 252910055844039
+		},
+		{
+			"eventType": "variable",
+			"name": "randomTile",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 318327185536217
 		}
 	],
 	"sid": 105646159251261

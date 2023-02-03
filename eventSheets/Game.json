@@ -524,9 +524,124 @@
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 960940516848822,
+											"parameters": {
+												"variable": "randomTile",
+												"value": "int(random(0,11))"
+											}
 										}
 									],
-									"sid": 822812661446950
+									"sid": 822812661446950,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 395321851289281,
+													"parameters": {
+														"variable": "randomTile",
+														"comparison": 3,
+														"value": "7"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "GridBlock",
+													"sid": 329969154365762,
+													"parameters": {
+														"frame-number": "0"
+													}
+												}
+											],
+											"sid": 539588181577350
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 621972980432565,
+													"parameters": {
+														"variable": "randomTile",
+														"comparison": 0,
+														"value": "8"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "GridBlock",
+													"sid": 123858040961667,
+													"parameters": {
+														"frame-number": "2"
+													}
+												}
+											],
+											"sid": 256343366526715
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 482166170627592,
+													"parameters": {
+														"variable": "randomTile",
+														"comparison": 0,
+														"value": "9"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "GridBlock",
+													"sid": 856177940892451,
+													"parameters": {
+														"frame-number": "3"
+													}
+												}
+											],
+											"sid": 141807359585957
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-eventvar",
+													"objectClass": "System",
+													"sid": 225520157120309,
+													"parameters": {
+														"variable": "randomTile",
+														"comparison": 0,
+														"value": "10"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation-frame",
+													"objectClass": "GridBlock",
+													"sid": 562149678765889,
+													"parameters": {
+														"frame-number": "4"
+													}
+												}
+											],
+											"sid": 392833432382607
+										}
+									]
 								}
 							]
 						}
@@ -568,6 +683,212 @@
 		{
 			"eventType": "group",
 			"disabled": false,
+			"title": "Score Logic",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 997712570422304,
+							"parameters": {
+								"object": "GridBlock"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 233210734500336,
+							"parameters": {
+								"comparison": 0,
+								"number": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 375834105831632,
+							"disabled": true,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 794530752464528,
+							"parameters": {
+								"variable": "Points",
+								"value": "10"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Score",
+							"sid": 493485233439980,
+							"parameters": {
+								"text": "Points"
+							}
+						}
+					],
+					"sid": 517767785609285
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 797340100183697,
+							"parameters": {
+								"object": "GridBlock"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 993900025837227,
+							"parameters": {
+								"comparison": 0,
+								"number": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 747765537726946,
+							"disabled": true,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 897241954610615,
+							"parameters": {
+								"variable": "Points",
+								"value": "25"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Score",
+							"sid": 419548924896651,
+							"parameters": {
+								"text": "Points"
+							}
+						}
+					],
+					"sid": 367507677586736
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 532893827312704,
+							"parameters": {
+								"object": "GridBlock"
+							}
+						},
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 436438285597916,
+							"parameters": {
+								"comparison": 0,
+								"number": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "GridBlock",
+							"sid": 480495996888030,
+							"disabled": true,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 219583665532777,
+							"parameters": {
+								"variable": "Points",
+								"value": "50"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Score",
+							"sid": 138899499943688,
+							"parameters": {
+								"text": "Points"
+							}
+						}
+					],
+					"sid": 606084740625711
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Root",
+							"sid": 930850292754365,
+							"parameters": {
+								"object": "water"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 143832889489814
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Root",
+							"sid": 759268579761301
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 498391539745475,
+							"parameters": {
+								"variable": "Points",
+								"value": "Points*1.5"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Score",
+							"sid": 809399501069429,
+							"parameters": {
+								"text": "Points"
+							}
+						}
+					],
+					"sid": 219132831379549
+				}
+			],
+			"sid": 316722662288502
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
 			"title": "Alternate Controls",
 			"description": "",
 			"isActiveOnStart": true,
@@ -586,10 +907,10 @@
 						{
 							"id": "compare-animation-frame",
 							"objectClass": "GridBlock",
-							"sid": 901379724359838,
+							"sid": 210018853614150,
 							"parameters": {
-								"comparison": 0,
-								"number": "0"
+								"comparison": 1,
+								"number": "1"
 							}
 						},
 						{
@@ -658,14 +979,6 @@
 								"comparison": 3,
 								"value": "0"
 							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Root",
-							"sid": 342496420315335,
-							"parameters": {
-								"object": "water"
-							}
 						}
 					],
 					"actions": [
@@ -680,185 +993,6 @@
 				}
 			],
 			"sid": 775582574941810
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Thiago's Logic",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "every-tick",
-							"objectClass": "System",
-							"sid": 302900335733966
-						}
-					],
-					"actions": [
-						{
-							"id": "set-text",
-							"objectClass": "Score",
-							"sid": 380277501841387,
-							"parameters": {
-								"text": "Points"
-							}
-						}
-					],
-					"sid": 582050164354214
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Root",
-							"sid": 719841353934093,
-							"parameters": {
-								"object": "nutrient_small"
-							}
-						},
-						{
-							"id": "is-dragging",
-							"objectClass": "Root",
-							"sid": 126148139622698,
-							"behaviorType": "DragDrop"
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "nutrient_small",
-							"sid": 887865795538227
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 336232267614328,
-							"parameters": {
-								"variable": "Points",
-								"value": "10"
-							}
-						}
-					],
-					"sid": 321948750972781
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Root",
-							"sid": 380791237488290,
-							"parameters": {
-								"object": "nutrient_medium"
-							}
-						},
-						{
-							"id": "is-dragging",
-							"objectClass": "Root",
-							"sid": 809871967104741,
-							"behaviorType": "DragDrop"
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "nutrient_medium",
-							"sid": 206104606220475
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 151823522167644,
-							"parameters": {
-								"variable": "Points",
-								"value": "25"
-							}
-						}
-					],
-					"sid": 174019440586556
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Root",
-							"sid": 421867085631686,
-							"parameters": {
-								"object": "nutrient_large"
-							}
-						},
-						{
-							"id": "is-dragging",
-							"objectClass": "Root",
-							"sid": 502028017493337,
-							"behaviorType": "DragDrop"
-						}
-					],
-					"actions": [
-						{
-							"id": "destroy",
-							"objectClass": "nutrient_large",
-							"sid": 348104860731972
-						},
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 249137780109740,
-							"parameters": {
-								"variable": "Points",
-								"value": "50"
-							}
-						}
-					],
-					"sid": 518736102634877
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-collision-with-another-object",
-							"objectClass": "Root",
-							"sid": 118219347922096,
-							"parameters": {
-								"object": "water"
-							}
-						},
-						{
-							"id": "is-dragging",
-							"objectClass": "Root",
-							"sid": 688683382410080,
-							"behaviorType": "DragDrop"
-						}
-					],
-					"actions": [
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 457470975853713,
-							"parameters": {
-								"variable": "Points",
-								"value": "Points*1.5"
-							}
-						},
-						{
-							"id": "set-enabled",
-							"objectClass": "Root",
-							"sid": 925984189446222,
-							"behaviorType": "DragDrop",
-							"parameters": {
-								"state": "disabled"
-							}
-						}
-					],
-					"sid": 390524322208737
-				}
-			],
-			"sid": 661311651110008
 		}
 	],
 	"sid": 125633370238273
