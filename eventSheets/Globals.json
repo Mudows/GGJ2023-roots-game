@@ -42,6 +42,16 @@
 			"sid": 934059416464523
 		},
 		{
+			"eventType": "variable",
+			"name": "highScore",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Record the highest amount of points that the player reached.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 503737993697014
+		},
+		{
 			"eventType": "comment",
 			"text": "Saves the previous grid position"
 		},

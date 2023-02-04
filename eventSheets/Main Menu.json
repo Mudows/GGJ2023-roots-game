@@ -52,6 +52,60 @@
 				}
 			],
 			"sid": 411535956661324
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 299026445098780
+				}
+			],
+			"actions": [
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 548731664002872,
+					"parameters": {
+						"key": "\"highScore\""
+					}
+				}
+			],
+			"sid": 637272147205914
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 534389948197342,
+					"parameters": {
+						"key": "\"highScore\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 191930586060731,
+					"parameters": {
+						"variable": "highScore",
+						"value": "int(LocalStorage.ItemValue)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "highScore",
+					"sid": 322693879830195,
+					"parameters": {
+						"text": "highScore"
+					}
+				}
+			],
+			"sid": 989515976439928
 		}
 	],
 	"sid": 319694218092111
