@@ -589,7 +589,17 @@
 							"sid": 119557942128901
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 349159903386029,
+							"parameters": {
+								"variable": "player_turns",
+								"value": "1"
+							}
+						}
+					],
 					"sid": 398497571384552,
 					"children": [
 						{
@@ -637,6 +647,118 @@
 				}
 			],
 			"sid": 775582574941810
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Endings",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 566800421298565,
+							"parameters": {
+								"variable": "player_turns",
+								"comparison": 3,
+								"value": "0"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 631885747369254
+						}
+					],
+					"actions": [],
+					"sid": 296538124870517,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 100003230155703,
+									"parameters": {
+										"variable": "Points",
+										"comparison": 5,
+										"value": "100"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "carrot",
+									"sid": 462429243188783,
+									"parameters": {
+										"frame-number": "1"
+									}
+								}
+							],
+							"sid": 596235020159898
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 345090578385207,
+									"parameters": {
+										"variable": "Points",
+										"comparison": 5,
+										"value": "200"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "carrot",
+									"sid": 576026516645477,
+									"parameters": {
+										"frame-number": "2"
+									}
+								}
+							],
+							"sid": 682476321705456
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 729811562769043,
+									"parameters": {
+										"variable": "Points",
+										"comparison": 5,
+										"value": "300"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation-frame",
+									"objectClass": "carrot",
+									"sid": 726622675298799,
+									"parameters": {
+										"frame-number": "3"
+									}
+								}
+							],
+							"sid": 237709605993262
+						}
+					]
+				}
+			],
+			"sid": 492355390849570
 		}
 	],
 	"sid": 125633370238273
