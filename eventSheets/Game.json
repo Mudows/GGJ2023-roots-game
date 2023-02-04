@@ -683,6 +683,33 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
+									"sid": 218071425012853,
+									"parameters": {
+										"variable": "Points",
+										"comparison": 4,
+										"value": "highScore"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 791777365702322,
+									"parameters": {
+										"key": "\"highScore\"",
+										"value": "Points"
+									}
+								}
+							],
+							"sid": 977047382643693
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
 									"sid": 100003230155703,
 									"parameters": {
 										"variable": "Points",
@@ -754,6 +781,29 @@
 								}
 							],
 							"sid": 237709605993262
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 114911105847273,
+									"parameters": {
+										"seconds": "2"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 542756483365500,
+									"parameters": {
+										"layout": "Main Menu"
+									}
+								}
+							],
+							"sid": 270132594572038
 						}
 					]
 				}

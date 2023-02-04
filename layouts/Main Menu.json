@@ -110,7 +110,7 @@
 				{
 					"type": "highScore",
 					"properties": {
-						"text": "High Score:",
+						"text": "High Score: 0",
 						"enable-bbcode": true,
 						"font": "OpenDyslexic3-Regular",
 						"size": 12,
