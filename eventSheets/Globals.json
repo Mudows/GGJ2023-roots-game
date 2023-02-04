@@ -12,6 +12,36 @@
 			"sid": 737988115011817
 		},
 		{
+			"eventType": "variable",
+			"name": "Points",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The game score",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 235016555478998
+		},
+		{
+			"eventType": "variable",
+			"name": "randomTile",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Stores a random number that sets what kind of tile is being created.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 618814082680190
+		},
+		{
+			"eventType": "variable",
+			"name": "player_turns",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "How many turns the player have before the game is over.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 934059416464523
+		},
+		{
 			"eventType": "comment",
 			"text": "Saves the previous grid position"
 		},
@@ -34,16 +64,6 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 713493189239242
-		},
-		{
-			"eventType": "variable",
-			"name": "Points",
-			"type": "number",
-			"initialValue": "0",
-			"comment": "",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 252910055844039
 		}
 	],
 	"sid": 105646159251261

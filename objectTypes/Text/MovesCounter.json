@@ -1,7 +1,7 @@
 {
-	"name": "Score",
+	"name": "MovesCounter",
 	"plugin-id": "Text",
-	"sid": 343859017527419,
+	"sid": 934393664694028,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],

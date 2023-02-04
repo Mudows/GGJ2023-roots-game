@@ -29,13 +29,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "TiledBg",
-			"name": "Tiled Background",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "Touch",
 			"name": "Touch",
 			"author": "Scirra",
@@ -52,13 +45,6 @@
 			"type": "behavior",
 			"id": "TileMovement",
 			"name": "Tile movement",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Tween",
-			"name": "Tween",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -86,21 +72,13 @@
 	],
 	"uniqueId": "8tfmighra2c",
 	"objectTypes": {
-		"items": [
-			"Root",
-			"Line",
-			"Score",
-			"nutrient_small",
-			"nutrient_medium",
-			"nutrient_large",
-			"Credits_Title",
-			"MainBTN"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
 					"CreditsBTN",
-					"StartBTN"
+					"StartBTN",
+					"MainBTN"
 				],
 				"subfolders": [],
 				"name": "Buttons"
@@ -123,7 +101,10 @@
 			},
 			{
 				"items": [
-					"Meu_Title"
+					"Meu_Title",
+					"Credits_Title",
+					"Score",
+					"MovesCounter"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -135,6 +116,14 @@
 				],
 				"subfolders": [],
 				"name": "Scenario"
+			},
+			{
+				"items": [
+					"Root",
+					"spawnPoint"
+				],
+				"subfolders": [],
+				"name": "Player"
 			}
 		]
 	},
@@ -179,7 +168,24 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "OpenDyslexic3-Bold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 500315691992891,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "OpenDyslexic3-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 616420424287809,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
@@ -314,5 +320,5 @@
 	},
 	"viewportWidth": 480,
 	"viewportHeight": 640,
-	"firstLayout": "Game"
+	"firstLayout": "Main Menu"
 }

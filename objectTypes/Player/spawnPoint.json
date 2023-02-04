@@ -1,7 +1,7 @@
 {
-	"name": "nutrient_small",
+	"name": "spawnPoint",
 	"plugin-id": "Sprite",
-	"sid": 866177344888253,
+	"sid": 518130924609357,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -11,25 +11,25 @@
 			{
 				"frames": [
 					{
-						"width": 31,
-						"height": 31,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 16,
+						"height": 16,
+						"originX": 0,
+						"originY": 0,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2684120,
+						"imageSpriteId": 8245361,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 243211517068764,
+				"sid": 839573902738499,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 0
 			}
 		],
 		"subfolders": []
