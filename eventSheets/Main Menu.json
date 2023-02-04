@@ -5,53 +5,122 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 298457837776109,
-					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "StartBTN"
-					}
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 299026445098780
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
+					"id": "reset-global-variables",
 					"objectClass": "System",
-					"sid": 169391116345934,
+					"sid": 951346302060003
+				},
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 548731664002872,
 					"parameters": {
-						"layout": "Game"
+						"key": "\"highScore\""
 					}
 				}
 			],
-			"sid": 456523047248367
+			"sid": 637272147205914
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-object-clicked",
-					"objectClass": "Mouse",
-					"sid": 654850536289702,
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 534389948197342,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked",
-						"object-clicked": "CreditsBTN"
+						"key": "\"highScore\""
 					}
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
+					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 600491841652541,
+					"sid": 191930586060731,
 					"parameters": {
-						"layout": "Credits"
+						"variable": "highScore",
+						"value": "int(LocalStorage.ItemValue)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "highScore",
+					"sid": 765992006229814,
+					"parameters": {
+						"text": "\"High Score: \" & highScore"
 					}
 				}
 			],
-			"sid": 411535956661324
+			"sid": 989515976439928
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Interactions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 711333108639003,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "StartBTN"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 392922506968758,
+							"parameters": {
+								"layout": "Game"
+							}
+						}
+					],
+					"sid": 418445903734074
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 633322427109661,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "CreditsBTN"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 126728649835752,
+							"parameters": {
+								"layout": "Credits"
+							}
+						}
+					],
+					"sid": 718362961162721
+				}
+			],
+			"sid": 373499436948016
 		}
 	],
 	"sid": 319694218092111
