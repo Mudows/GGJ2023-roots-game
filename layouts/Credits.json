@@ -11,7 +11,7 @@
 					"properties": {
 						"text": "Credits Screen",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "OpenDyslexic3-Regular",
 						"size": 32,
 						"line-height": 0,
 						"bold": false,

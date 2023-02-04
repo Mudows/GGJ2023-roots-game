@@ -178,7 +178,24 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "OpenDyslexic3-Bold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 500315691992891,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "OpenDyslexic3-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 616420424287809,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
