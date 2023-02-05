@@ -8,6 +8,13 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "LocalStorage",
 			"name": "Local storage",
 			"author": "Scirra",
@@ -101,10 +108,11 @@
 				"items": [
 					"Mouse",
 					"Touch",
-					"LocalStorage"
+					"LocalStorage",
+					"Audio"
 				],
 				"subfolders": [],
-				"name": "Plugins"
+				"name": "PLUGINS"
 			},
 			{
 				"items": [
@@ -178,7 +186,32 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "Viktor Kraus - Blueberries.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 540710040268480,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Simple - 4 (Winter).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 342681094642713,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "snespuppy.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 774105113499701,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
