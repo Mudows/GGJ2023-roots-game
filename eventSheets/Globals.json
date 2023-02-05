@@ -1,0 +1,80 @@
+{
+	"name": "Globals",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "isTouching",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Check if the player is touching the screen.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 737988115011817
+		},
+		{
+			"eventType": "variable",
+			"name": "Points",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The game score",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 235016555478998
+		},
+		{
+			"eventType": "variable",
+			"name": "randomTile",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Stores a random number that sets what kind of tile is being created.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 618814082680190
+		},
+		{
+			"eventType": "variable",
+			"name": "player_turns",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "How many turns the player have before the game is over.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 934059416464523
+		},
+		{
+			"eventType": "variable",
+			"name": "highScore",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Record the highest amount of points that the player reached.",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 503737993697014
+		},
+		{
+			"eventType": "comment",
+			"text": "Saves the previous grid position"
+		},
+		{
+			"eventType": "variable",
+			"name": "previous_X",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 436994028156846
+		},
+		{
+			"eventType": "variable",
+			"name": "previous_Y",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 713493189239242
+		}
+	],
+	"sid": 105646159251261
+}

@@ -1,15 +1,165 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 32700,
+	"savedWithRelease": 32702,
 	"name": "roots",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
-	"usedAddons": [],
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "LocalStorage",
+			"name": "Local storage",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "TileMovement",
+			"name": "Tile movement",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
 	"uniqueId": "8tfmighra2c",
 	"objectTypes": {
 		"items": [],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"CreditsBTN",
+					"StartBTN",
+					"MainBTN"
+				],
+				"subfolders": [],
+				"name": "Buttons"
+			},
+			{
+				"items": [
+					"Mouse",
+					"Touch",
+					"LocalStorage",
+					"Audio",
+					"Keyboard"
+				],
+				"subfolders": [],
+				"name": "PLUGINS"
+			},
+			{
+				"items": [
+					"GridBlock"
+				],
+				"subfolders": [],
+				"name": "Grid"
+			},
+			{
+				"items": [
+					"Meu_Title",
+					"Credits_Title",
+					"Score",
+					"MovesCounter",
+					"highScore"
+				],
+				"subfolders": [],
+				"name": "Text"
+			},
+			{
+				"items": [
+					"carrot",
+					"water",
+					"earth_bg",
+					"sky",
+					"grass"
+				],
+				"subfolders": [],
+				"name": "Scenario"
+			},
+			{
+				"items": [
+					"Root",
+					"spawnPoint"
+				],
+				"subfolders": [],
+				"name": "Player"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -19,13 +169,18 @@
 	},
 	"layouts": {
 		"items": [
-			"Game"
+			"Game",
+			"Main Menu",
+			"Credits"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Game"
+			"Game",
+			"Main Menu",
+			"Credits",
+			"Globals"
 		],
 		"subfolders": []
 	},
@@ -35,11 +190,37 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Water_SFX.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 260646845360794,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Roots_SFX.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 999537463221087,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "BGM - snespuppy.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 774105113499701,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
@@ -47,7 +228,24 @@
 			"subfolders": []
 		},
 		"font": {
-			"items": [],
+			"items": [
+				{
+					"name": "OpenDyslexic3-Bold.ttf",
+					"type": "application/font-sfnt",
+					"sid": 500315691992891,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "OpenDyslexic3-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 616420424287809,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"icon": {
@@ -138,8 +336,8 @@
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-integer-scale",
-		"fullscreenQuality": "low",
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
 		"viewportFit": "auto",
 		"backgroundColor": [
 			0,
@@ -182,5 +380,5 @@
 	},
 	"viewportWidth": 480,
 	"viewportHeight": 640,
-	"firstLayout": null
+	"firstLayout": "Main Menu"
 }

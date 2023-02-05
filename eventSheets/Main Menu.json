@@ -1,0 +1,232 @@
+{
+	"name": "Main Menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 299026445098780
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 951346302060003
+				},
+				{
+					"id": "get-item",
+					"objectClass": "LocalStorage",
+					"sid": 548731664002872,
+					"parameters": {
+						"key": "\"highScore\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 961530222815919,
+					"parameters": {
+						"audio-file": "BGM - snespuppy",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 637272147205914
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-item-get",
+					"objectClass": "LocalStorage",
+					"sid": 534389948197342,
+					"parameters": {
+						"key": "\"highScore\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 191930586060731,
+					"parameters": {
+						"variable": "highScore",
+						"value": "int(LocalStorage.ItemValue)"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "highScore",
+					"sid": 765992006229814,
+					"parameters": {
+						"text": "\"High Score: \" & highScore"
+					}
+				}
+			],
+			"sid": 989515976439928
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Interactions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 711333108639003,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "StartBTN"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 392922506968758,
+							"parameters": {
+								"layout": "Game"
+							}
+						}
+					],
+					"sid": 418445903734074
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 633322427109661,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "CreditsBTN"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 126728649835752,
+							"parameters": {
+								"layout": "Credits"
+							}
+						}
+					],
+					"sid": 718362961162721
+				}
+			],
+			"sid": 373499436948016
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Grid",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "GridSpacing",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "used in case the GridBlock object size is different from the grid (32 x 32) to correct the size and display the block correctly (block must be a square)",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 197677544024013
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 593395937037248
+						}
+					],
+					"actions": [],
+					"sid": 274085430287625,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 957645572002540,
+									"parameters": {
+										"name": "\"Grid Col\"",
+										"start-index": "0",
+										"end-index": "(640 / (GridBlock.Height + GridSpacing)) -1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 208443779132967,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 682759784087216,
+											"parameters": {
+												"name": "\"Grid Line\"",
+												"start-index": "0",
+												"end-index": "(480 / (GridBlock.Width + GridSpacing)) - 1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 209740982460095,
+											"parameters": {
+												"object-to-create": "GridBlock",
+												"layer": "0",
+												"x": "((GridBlock.Width + GridSpacing) / 2) + loopindex(\"Grid Line\") * (GridBlock.Width + GridSpacing)",
+												"y": "128 + ((GridBlock.Height + GridSpacing) / 2) + loopindex(\"Grid Col\") * (GridBlock.Height + GridSpacing)",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 432558012173567,
+											"parameters": {
+												"variable": "randomTile",
+												"value": "int(random(0,101))"
+											}
+										}
+									],
+									"sid": 301113869202675
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 297537240584716
+		}
+	],
+	"sid": 319694218092111
+}
