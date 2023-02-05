@@ -379,6 +379,18 @@
 							"sid": 759268579761301
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 971406201952880,
+							"parameters": {
+								"audio-file": "Water_SFX",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 960204931051312,
@@ -439,6 +451,18 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 582475976860070,
+							"parameters": {
+								"audio-file": "Roots_SFX",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
@@ -596,10 +620,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "MovesCounter",
-							"sid": 415299504485927,
+							"sid": 777861370284676,
 							"parameters": {
 								"x": "Root.X",
-								"y": "Root.Y"
+								"y": "Root.Y - Root.Height"
 							}
 						}
 					],
@@ -634,7 +658,16 @@
 							"sid": 631885747369254
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MovesCounter",
+							"sid": 108450709710805,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
 					"sid": 296538124870517,
 					"children": [
 						{
