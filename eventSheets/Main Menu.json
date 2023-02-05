@@ -133,6 +133,99 @@
 				}
 			],
 			"sid": 373499436948016
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Grid",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "GridSpacing",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "used in case the GridBlock object size is different from the grid (32 x 32) to correct the size and display the block correctly (block must be a square)",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 197677544024013
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 593395937037248
+						}
+					],
+					"actions": [],
+					"sid": 274085430287625,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 957645572002540,
+									"parameters": {
+										"name": "\"Grid Col\"",
+										"start-index": "0",
+										"end-index": "(640 / (GridBlock.Height + GridSpacing)) -1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 208443779132967,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 682759784087216,
+											"parameters": {
+												"name": "\"Grid Line\"",
+												"start-index": "0",
+												"end-index": "(480 / (GridBlock.Width + GridSpacing)) - 1"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 209740982460095,
+											"parameters": {
+												"object-to-create": "GridBlock",
+												"layer": "0",
+												"x": "((GridBlock.Width + GridSpacing) / 2) + loopindex(\"Grid Line\") * (GridBlock.Width + GridSpacing)",
+												"y": "128 + ((GridBlock.Height + GridSpacing) / 2) + loopindex(\"Grid Col\") * (GridBlock.Height + GridSpacing)",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 432558012173567,
+											"parameters": {
+												"variable": "randomTile",
+												"value": "int(random(0,101))"
+											}
+										}
+									],
+									"sid": 301113869202675
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 297537240584716
 		}
 	],
 	"sid": 319694218092111

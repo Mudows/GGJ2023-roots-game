@@ -620,10 +620,10 @@
 						{
 							"id": "set-position",
 							"objectClass": "MovesCounter",
-							"sid": 415299504485927,
+							"sid": 777861370284676,
 							"parameters": {
 								"x": "Root.X",
-								"y": "Root.Y"
+								"y": "Root.Y - Root.Height"
 							}
 						}
 					],
@@ -658,7 +658,16 @@
 							"sid": 631885747369254
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MovesCounter",
+							"sid": 108450709710805,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
 					"sid": 296538124870517,
 					"children": [
 						{

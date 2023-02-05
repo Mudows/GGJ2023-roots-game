@@ -473,14 +473,14 @@
 						"text": "Score: 0",
 						"enable-bbcode": true,
 						"font": "OpenDyslexic3-Regular",
-						"size": 18,
+						"size": 12,
 						"line-height": 0,
-						"bold": false,
+						"bold": true,
 						"italic": false,
 						"color": [
-							0.8784313725490196,
-							0.4196078431372549,
-							0.3176470588235294,
+							0,
+							0,
+							0,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -494,8 +494,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 0,
-						"y": 96,
+						"x": 14,
+						"y": 35,
 						"width": 224,
 						"height": 32,
 						"originX": 0,
@@ -521,9 +521,9 @@
 						"bold": false,
 						"italic": false,
 						"color": [
-							1,
-							1,
-							1,
+							0,
+							0,
+							0,
 							1
 						],
 						"horizontal-alignment": "center",
