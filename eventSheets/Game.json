@@ -356,12 +356,12 @@
 					],
 					"actions": [
 						{
-							"id": "add-to-eventvar",
+							"id": "subtract-from-eventvar",
 							"objectClass": "System",
-							"sid": 897241954610615,
+							"sid": 382659406432430,
 							"parameters": {
 								"variable": "Points",
-								"value": "25"
+								"value": "5"
 							}
 						},
 						{
@@ -415,7 +415,8 @@
 							}
 						}
 					],
-					"sid": 606084740625711
+					"sid": 606084740625711,
+					"disabled": true
 				},
 				{
 					"eventType": "block",
