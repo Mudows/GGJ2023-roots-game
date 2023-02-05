@@ -93,7 +93,9 @@
 	],
 	"uniqueId": "8tfmighra2c",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"Title"
+		],
 		"subfolders": [
 			{
 				"items": [
