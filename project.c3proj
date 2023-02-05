@@ -15,6 +15,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "LocalStorage",
 			"name": "Local storage",
 			"author": "Scirra",
@@ -109,7 +116,8 @@
 					"Mouse",
 					"Touch",
 					"LocalStorage",
-					"Audio"
+					"Audio",
+					"Keyboard"
 				],
 				"subfolders": [],
 				"name": "PLUGINS"
@@ -182,29 +190,30 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "Water_SFX.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 260646845360794,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Roots_SFX.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 999537463221087,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"music": {
 			"items": [
 				{
-					"name": "Viktor Kraus - Blueberries.webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 540710040268480,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "Simple - 4 (Winter).webm",
-					"type": "audio/webm; codecs=opus",
-					"sid": 342681094642713,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "snespuppy.webm",
+					"name": "BGM - snespuppy.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 774105113499701,
 					"file-info": {

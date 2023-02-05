@@ -379,6 +379,18 @@
 							"sid": 759268579761301
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 971406201952880,
+							"parameters": {
+								"audio-file": "Water_SFX",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 960204931051312,
@@ -439,6 +451,18 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 582475976860070,
+							"parameters": {
+								"audio-file": "Roots_SFX",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",

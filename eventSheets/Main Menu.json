@@ -23,6 +23,18 @@
 					"parameters": {
 						"key": "\"highScore\""
 					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 961530222815919,
+					"parameters": {
+						"audio-file": "BGM - snespuppy",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
 				}
 			],
 			"sid": 637272147205914
