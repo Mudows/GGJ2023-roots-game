@@ -628,6 +628,51 @@
 						}
 					],
 					"sid": 484040038108994
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Root",
+							"sid": 631597325399550,
+							"behaviorType": "TileMovement"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Root",
+							"sid": 647524615857452,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 459370577648763
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Root",
+							"sid": 561638643753716,
+							"behaviorType": "TileMovement",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Root",
+							"sid": 870455821450172,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 505254223110593
 				}
 			],
 			"sid": 775582574941810
@@ -703,11 +748,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 100003230155703,
+									"sid": 389265552380409,
 									"parameters": {
 										"variable": "Points",
 										"comparison": 5,
-										"value": "100"
+										"value": "150"
 									}
 								}
 							],
@@ -729,11 +774,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 345090578385207,
+									"sid": 321523772850419,
 									"parameters": {
 										"variable": "Points",
 										"comparison": 5,
-										"value": "200"
+										"value": "300"
 									}
 								}
 							],
@@ -755,11 +800,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 729811562769043,
+									"sid": 859510083027434,
 									"parameters": {
 										"variable": "Points",
 										"comparison": 5,
-										"value": "300"
+										"value": "450"
 									}
 								}
 							],

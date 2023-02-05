@@ -64,13 +64,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "DragnDrop",
-			"name": "Drag & Drop",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "TileMovement",
 			"name": "Tile movement",
 			"author": "Scirra",
@@ -106,7 +99,8 @@
 				"items": [
 					"CreditsBTN",
 					"StartBTN",
-					"MainBTN"
+					"MainBTN",
+					"HowToBTN"
 				],
 				"subfolders": [],
 				"name": "Buttons"
@@ -135,7 +129,10 @@
 					"Credits_Title",
 					"Score",
 					"MovesCounter",
-					"highScore"
+					"highScore",
+					"Credits",
+					"BtnText",
+					"HowToPlay"
 				],
 				"subfolders": [],
 				"name": "Text"
@@ -170,8 +167,7 @@
 	"layouts": {
 		"items": [
 			"Game",
-			"Main Menu",
-			"Credits"
+			"Main Menu"
 		],
 		"subfolders": []
 	},
@@ -179,7 +175,6 @@
 		"items": [
 			"Game",
 			"Main Menu",
-			"Credits",
 			"Globals"
 		],
 		"subfolders": []
