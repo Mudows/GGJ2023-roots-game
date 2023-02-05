@@ -24,25 +24,11 @@
 						{
 							"id": "on-start-of-layout",
 							"objectClass": "System",
-							"sid": 911330216948107
+							"sid": 465715113796708
 						}
 					],
-					"actions": [
-						{
-							"type": "comment",
-							"text": "Position of the grid background."
-						},
-						{
-							"id": "set-position",
-							"objectClass": "GridBoard",
-							"sid": 642386878572886,
-							"parameters": {
-								"x": "GridBoard.Width / 2",
-								"y": "(GridBoard.Height / 2) + 128"
-							}
-						}
-					],
-					"sid": 837605601084527,
+					"actions": [],
+					"sid": 338216770639496,
 					"children": [
 						{
 							"eventType": "comment",
@@ -54,7 +40,7 @@
 								{
 									"id": "for",
 									"objectClass": "System",
-									"sid": 480616450636122,
+									"sid": 819249591576598,
 									"parameters": {
 										"name": "\"Grid Col\"",
 										"start-index": "0",
@@ -63,7 +49,7 @@
 								}
 							],
 							"actions": [],
-							"sid": 610709919834141,
+							"sid": 350443691035105,
 							"children": [
 								{
 									"eventType": "block",
@@ -71,7 +57,7 @@
 										{
 											"id": "for",
 											"objectClass": "System",
-											"sid": 971623415352812,
+											"sid": 474958276411040,
 											"parameters": {
 												"name": "\"Grid Line\"",
 												"start-index": "0",
@@ -83,7 +69,7 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 924482441611445,
+											"sid": 282889225509275,
 											"parameters": {
 												"object-to-create": "GridBlock",
 												"layer": "1",
@@ -96,14 +82,14 @@
 										{
 											"id": "set-eventvar-value",
 											"objectClass": "System",
-											"sid": 638812218877371,
+											"sid": 776482100631672,
 											"parameters": {
 												"variable": "randomTile",
 												"value": "int(random(0,101))"
 											}
 										}
 									],
-									"sid": 822812661446950,
+									"sid": 325348547353427,
 									"children": [
 										{
 											"eventType": "block",
@@ -111,11 +97,11 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 184291026986682,
+													"sid": 909853523474926,
 													"parameters": {
 														"variable": "randomTile",
 														"comparison": 5,
-														"value": "65"
+														"value": "50"
 													}
 												}
 											],
@@ -123,42 +109,7 @@
 												{
 													"id": "set-animation-frame",
 													"objectClass": "GridBlock",
-													"sid": 727582459499546,
-													"parameters": {
-														"frame-number": "5"
-													}
-												},
-												{
-													"id": "set-enabled",
-													"objectClass": "GridBlock",
-													"sid": 654384044930296,
-													"behaviorType": "Solid",
-													"parameters": {
-														"state": "enabled"
-													}
-												}
-											],
-											"sid": 256343366526715
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-eventvar",
-													"objectClass": "System",
-													"sid": 385892984407676,
-													"parameters": {
-														"variable": "randomTile",
-														"comparison": 5,
-														"value": "71"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-animation-frame",
-													"objectClass": "GridBlock",
-													"sid": 874930741540551,
+													"sid": 426606595096941,
 													"parameters": {
 														"frame-number": "2"
 													}
@@ -166,14 +117,14 @@
 												{
 													"id": "set-enabled",
 													"objectClass": "GridBlock",
-													"sid": 356115926619725,
+													"sid": 222161185094786,
 													"behaviorType": "Solid",
 													"parameters": {
 														"state": "disabled"
 													}
 												}
 											],
-											"sid": 202549558086188
+											"sid": 833830692230878
 										},
 										{
 											"eventType": "block",
@@ -181,11 +132,11 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 673326603994223,
+													"sid": 822075913595665,
 													"parameters": {
 														"variable": "randomTile",
 														"comparison": 5,
-														"value": "86"
+														"value": "75"
 													}
 												}
 											],
@@ -193,7 +144,7 @@
 												{
 													"id": "set-animation-frame",
 													"objectClass": "GridBlock",
-													"sid": 856177940892451,
+													"sid": 738593022122621,
 													"parameters": {
 														"frame-number": "3"
 													}
@@ -201,14 +152,14 @@
 												{
 													"id": "set-enabled",
 													"objectClass": "GridBlock",
-													"sid": 250348611255794,
+													"sid": 953849542986475,
 													"behaviorType": "Solid",
 													"parameters": {
 														"state": "disabled"
 													}
 												}
 											],
-											"sid": 141807359585957
+											"sid": 947094542729912
 										},
 										{
 											"eventType": "block",
@@ -216,11 +167,11 @@
 												{
 													"id": "compare-eventvar",
 													"objectClass": "System",
-													"sid": 814313717989235,
+													"sid": 905639283713467,
 													"parameters": {
 														"variable": "randomTile",
 														"comparison": 5,
-														"value": "95"
+														"value": "90"
 													}
 												}
 											],
@@ -228,7 +179,7 @@
 												{
 													"id": "set-animation-frame",
 													"objectClass": "GridBlock",
-													"sid": 562149678765889,
+													"sid": 425744225963245,
 													"parameters": {
 														"frame-number": "4"
 													}
@@ -236,14 +187,35 @@
 												{
 													"id": "set-enabled",
 													"objectClass": "GridBlock",
-													"sid": 121675827126285,
+													"sid": 951662513543798,
 													"behaviorType": "Solid",
 													"parameters": {
-														"state": "disabled"
+														"state": "enabled"
 													}
 												}
 											],
-											"sid": 392833432382607
+											"sid": 245986158395501
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-another-object",
+													"objectClass": "GridBlock",
+													"sid": 663292542396537,
+													"parameters": {
+														"object": "Root"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "destroy",
+													"objectClass": "GridBlock",
+													"sid": 408320022437431
+												}
+											],
+											"sid": 926192387051983
 										}
 									]
 								}
@@ -257,7 +229,7 @@
 						{
 							"id": "is-overlapping-another-object",
 							"objectClass": "GridBlock",
-							"sid": 210591206264068,
+							"sid": 460929538895820,
 							"parameters": {
 								"object": "carrot"
 							}
@@ -265,9 +237,17 @@
 						{
 							"id": "is-overlapping-another-object",
 							"objectClass": "GridBlock",
-							"sid": 412601421690213,
+							"sid": 719927488265366,
 							"parameters": {
 								"object": "water"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "GridBlock",
+							"sid": 952426747485401,
+							"parameters": {
+								"object": "spawnPoint"
 							}
 						}
 					],
@@ -275,10 +255,10 @@
 						{
 							"id": "destroy",
 							"objectClass": "GridBlock",
-							"sid": 517758381425077
+							"sid": 966048542131298
 						}
 					],
-					"sid": 608941175009534,
+					"sid": 947236817629912,
 					"isOrBlock": true
 				}
 			],
@@ -645,6 +625,28 @@
 							"sid": 909190867576170
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 632323580625065
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "MovesCounter",
+							"sid": 415299504485927,
+							"parameters": {
+								"x": "Root.X",
+								"y": "Root.Y"
+							}
+						}
+					],
+					"sid": 484040038108994
 				}
 			],
 			"sid": 775582574941810
