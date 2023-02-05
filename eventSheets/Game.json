@@ -305,9 +305,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Score",
-							"sid": 493485233439980,
+							"sid": 730927326250636,
 							"parameters": {
-								"text": "Points"
+								"text": "\"Score: \" & Points"
 							}
 						}
 					],
@@ -347,56 +347,13 @@
 						{
 							"id": "set-text",
 							"objectClass": "Score",
-							"sid": 419548924896651,
+							"sid": 859929662311177,
 							"parameters": {
-								"text": "Points"
+								"text": "\"Score: \" & Points"
 							}
 						}
 					],
 					"sid": 367507677586736
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Root",
-							"sid": 532893827312704,
-							"parameters": {
-								"object": "GridBlock"
-							}
-						},
-						{
-							"id": "compare-animation-frame",
-							"objectClass": "GridBlock",
-							"sid": 436438285597916,
-							"parameters": {
-								"comparison": 0,
-								"number": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 219583665532777,
-							"parameters": {
-								"variable": "Points",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "Score",
-							"sid": 138899499943688,
-							"parameters": {
-								"text": "Points"
-							}
-						}
-					],
-					"sid": 606084740625711,
-					"disabled": true
 				},
 				{
 					"eventType": "block",
@@ -433,9 +390,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Score",
-							"sid": 809399501069429,
+							"sid": 890802077334226,
 							"parameters": {
-								"text": "Points"
+								"text": "\"Score: \" & Points"
 							}
 						}
 					],
